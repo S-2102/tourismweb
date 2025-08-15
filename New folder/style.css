@@ -2,9 +2,6 @@
 :root {
   --headfont: "Libertinus Serif", serif;
   --darkgreen: #1c352d;
-  --small-fontsize:0.875rem;
-  --large-fontsize:1.25rem;
-  --medium-fontsize:
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -121,7 +118,218 @@ a {
     object-fit: cover;
     object-position: center;
   }
+/* explore */
+    .explore {
+      margin-top: 1.5rem;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+    }
 
+    .cardPlaces {
+      width: 250px;
+      margin-top: 1.5rem;
+      height: 350px;
+      border: 2px solid var(--darkgreen);
+      border-radius: 10px;
+      padding: 0.5rem;
+      margin: 10px;
+      overflow: hidden;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .cardImage {
+      height: 60%;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center center;
+
+    }
+
+    .cardPlaces:hover {
+      scale: 1.02;
+    }
+
+    h2 {
+      font-weight: bolder;
+    }
+
+    .description p {
+      margin: 0;
+    }
+
+    .TopPlaces {
+      position: relative;
+      margin: 2rem 0;
+      display: flex;
+    }
+
+    .scroll-snap {
+      position: relative;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    .scroll-snap::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
+
+    .explore-title {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--darkgreen);
+      padding: 1rem;
+    }
+
+    .description h3.placeTitle {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    .details {
+      margin: 5px 0;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      color: green;
+    }
+
+    .rating i {
+      color: gold;
+      /* Yellow filled star */
+      font-size: 18px;
+    }
+
+    /* Arrows */
+    .arrow {
+      position: absolute;
+      width: 48px;
+      /* Size of button */
+      height: 48px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--darkgreen);
+      color: white;
+      border: none;
+      display: inline-flex;
+      /* Align icon center */
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+      border-radius: 50%;
+      font-size: 20px;
+    }
+
+    .arrow i {
+      color: inherit;
+    }
+
+    /* Optional: Hover effect */
+    .arrow:hover {
+      background-color: #1c3b07;
+      /* Background on hover */
+      color: white;
+      /* Icon color on hover */
+    }
+
+    .arrow.left {
+      left: 5px;
+    }
+
+    .arrow.right {
+      right: 5px;
+    }
+
+    .button {
+      background-color: #a7c295;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1rem;
+      font-size: 2rem;
+      font-family: var(--bodyFont);
+    }
+
+    .button:hover {
+      background-color: var(--darkgreen);
+      color: var(--lightgreen);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--darkgreen);
+    }
+
+
+    .save-button {
+      position: absolute;
+      top: 20px;
+      right: 23px;
+      cursor: pointer;
+      color: white;
+      /* default white */
+      border: none;
+      background-color: white;
+      border-radius: 50%;
+      padding: 5px;
+      transition: color 0.3s ease, 0.3s ease;
+
+    }
+
+    .save-button.change {
+      color: rgb(83, 14, 14);
+      /* Red when toggled */
+    }
+
+
+    @media (max-width:900)and (min-width:759px) {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .button {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width:760px) and (min-width:500px) {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .button {
+        font-size: 1.2rem;
+      }
+
+    }
+
+    @media (max-width:501px) and (min-width:200px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .button {
+        font-size: 1rem;
+      }
+    }
 @media (max-width: 768px) {
   #nav-bar {
     grid-template-columns: 0.5fr 1fr 0.5fr;
