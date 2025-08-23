@@ -1,0 +1,123 @@
+    .modal-body {
+      padding: 0;
+    }
+
+    .auth-container {
+      height: 70vh;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .auth-img {
+      width: 50%;
+      background: url("./assets/images/Darjeeling\ 🏞.jpeg") center center/cover no-repeat;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .auth-form {
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(to left, #cdddce 0%, #b7caec 100%);
+      border-radius: 0 20px 20px 0;
+    }
+
+    .auth-form h1 {
+      font-size: 28px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px 40px 10px 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #666;
+    }
+
+    .auth-btn {
+      padding: 0.55rem 2rem;
+      font-weight: 600;
+      background-color: rgb(91, 106, 80);
+      color: white;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .auth-btn:hover {
+      background-color: rgb(0, 41, 28);
+      color: white;
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .auth-footer a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .form-box {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .form-box.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .modal-content {
+      border-radius: 20px;
+      overflow: hidden;
+      /* Ensures border-radius applies neatly */
+    }
+
+    .custom-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+      font-size: 15px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .auth-img {
+        display: none;
+      }
+
+      .auth-form {
+        width: 100%;
+        height: 70vh;
+        /* 👈 Sets the height to 70% of viewport */
+        overflow-y: auto;
+        /* Optional: Scroll if content exceeds */
+      }
+    }
