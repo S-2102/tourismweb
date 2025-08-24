@@ -27,11 +27,10 @@ app.get("/placeslist.html", (req, res) => {
 app.post("/login", (req,res)=>{
   const{email,password}=req.body;
   if(email === username && password === userpassword){
-    
-    res.send("<h1>Logged In Succesfully</h1>");
+    res.redirect("/");
   }
   else{
-    res.redirect("/");
+    res.send("<h1>Retry</h1>");
     console.log(req.body);
   }
 })
@@ -40,10 +39,11 @@ app.post("/register", (req,res)=>{
    const{email,password}=req.body;
   if(email === username && password === userpassword){
     
-    res.send("<h1>Registered Succesfully</h1>");
+    res.send("<h1>User Already Exists</h1>");
   }
   else{
-    res.redirect("/");
+    
+    res.send("<h1>Regisered Successfully</h1>");
     console.log(req.body);
   }
 });
