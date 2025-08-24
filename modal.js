@@ -24,9 +24,9 @@
       e.preventDefault();
       toggleForms("login");
     });
-    document.querySelectorAll(".auth-form form").forEach(form => {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // prevent page reload
-        // You can handle login/signup here later with fetch/ajax
-      });
-    });
+    // document.querySelectorAll(".auth-form form").forEach(form => {
+    //   form.addEventListener("submit", function (e) {
+    //     e.preventDefault(); // prevent page reload
+    //     // You can handle login/signup here later with fetch/ajax
+    //   });
+    // });

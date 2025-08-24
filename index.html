@@ -24,7 +24,7 @@
     </button>
     <div id="logo">Logo</div>
     <ul class="navigation">
-      <li class="menu-item"><a href="#">Home</a></li>
+      <li class="menu-item"><a href="/index.html">Home</a></li>
       <li class="menu-item"><a href="#">About</a></li>
       <li class="menu-item"><a href="#">Navigate</a></li>
       <li class="menu-item"><a href="#">Favourites</a></li>
@@ -221,16 +221,16 @@
             <div class="auth-form">
               <!-- Login Form -->
               <div class="form-box login active">
-                <form onsubmit="return false;">
+                <form action="/login" method="post">
                   <h1>Welcome Back!</h1>
 
                   <div class="input-box">
-                    <input type="email" placeholder="email@gmail.com" required />
+                    <input type="email" name="email" placeholder="email@gmail.com" required />
                     <i class="bx bxs-envelope"></i>
                   </div>
 
                   <div class="input-box">
-                    <input type="password" placeholder="Password" required />
+                    <input type="password" name="password" placeholder="Password" required />
                     <i class="bx bxs-lock"></i>
                   </div>
                   <div class="d-flex justify-content-center">
@@ -248,16 +248,16 @@
 
               <!-- Signup Form -->
               <div class="form-box register">
-                <form onsubmit="return false;">
+                <form action="/login" method="post">
                   <h1>Welcome !</h1>
 
                   <div class="input-box">
-                    <input type="email" placeholder="email@gmail.com" required />
+                    <input type="email" name="email" placeholder="email@gmail.com" required />
                     <i class="bx bxs-envelope"></i>
                   </div>
 
                   <div class="input-box">
-                    <input type="password" placeholder="Password" required />
+                    <input type="password" name="password" placeholder="Password" required />
                     <i class="bx bxs-lock"></i>
                   </div>
                   <div class="d-flex justify-content-center">
