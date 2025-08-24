@@ -8,6 +8,14 @@ sidebarbutton.addEventListener("click",function(){
 sidebarbutton.setAttribute("aria-expanded",!expanded);
 
 });
+// savebutton
+  const save=document.querySelectorAll(".save-button svg");
+       save.forEach((save)=>{
+         save.addEventListener("click",function(e){
+           e.preventDefault(); 
+        save.classList.toggle("fill-red");
+       })
+       });
 
 // attractions carousel
 const track = document.querySelector(

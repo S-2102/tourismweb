@@ -3,6 +3,10 @@
   --headfont: "Libertinus Serif", serif;
   --darkgreen: #1c352d;
 }
+/* save-button toggle */
+.fill-red{
+  fill:red;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
