@@ -2,27 +2,39 @@ import express from "express";
 import bodyParser from "body-parser";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 
 const app = express();
 const port = 3000;
 var username="saineka@gmail.com";
 var userpassword="Saineka@123";
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-app.use(express.static(__dirname));
+// Read JSON file
+const gallery = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "data", "gallery.json"), "utf-8"));
+
+app.use(express.static("assets"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index.ejs",{gallery});
 });
 
-app.get("/placedetails.html", (req, res) => {
-  res.sendFile(__dirname + "/placedetails.html");
+app.get("/placedetails", (req, res) => {
+  res.render("placedetails.ejs");
 });
 
-app.get("/placeslist.html", (req, res) => {
-  res.sendFile(__dirname + "/placeslist.html");
+app.get("/placelist", (req, res) => {
+  res.render("placelist.ejs");
 });
+app.get("/favourites", (req,res)=>{
+  res.render("favourites.ejs");
+})
+app.get("/navigation", (req,res)=>{
+  res.render("navigation.ejs");
+})
 
 app.post("/login", (req,res)=>{
   const{email,password}=req.body;
