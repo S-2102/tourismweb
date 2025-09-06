@@ -74,7 +74,7 @@ h1, h2 {
   gap: 6px;
 }
 
-.rating {
+.place-description .rating {
   margin: 0;
   font-size: 1rem;
   color: var(--text-light);
@@ -83,7 +83,7 @@ h1, h2 {
   gap: 6px;
 }
 
-.rating img {
+.place-description .rating img {
   width: 16px;
   height: 16px;
 }

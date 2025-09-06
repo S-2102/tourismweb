@@ -28,6 +28,19 @@ header{
   top: 0;
   z-index: 1000;
 }
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ec994b;
+  font-weight: 700;
+}
+p.subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
 #nav-bar {
 
   background-color:  white;
@@ -248,11 +261,12 @@ header{
     }
 
     .cardImage {
-      height: 65%;
+      height: 70%;
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
       object-position: center center;
+      position: relative;
 
     }
 
@@ -284,29 +298,31 @@ header{
       display: none;
       /* Chrome, Safari */
     }
-
-   
-
-    .description h3.placeTitle {
-      font-size: 1.2rem;
+    .restaurant-details{
+      padding: 5px;
+    }
+     .cardPlaces .restaurant-details h3.placeTitle {
+      margin-top: 0.4rem;
+      font-size: 1.7rem;
+    }
+    .cardPlaces .restaurant-details p{
+      font-size: 12px;
     }
 
-    .details {
-      margin: 5px 0;
-    }
-
-    .rating {
+     .cardPlaces .rating {
+      position: absolute;
+      top: 21.7rem;
+      left: 1rem;
+      padding:4px 7px;
+      border-radius: 30px;   
+       background-color: var(--darkgreen);
+      color: white;
       display: flex;
       align-items: center;
       gap: 3px;
-      color: green;
+      font-size: 8px;
     }
 
-    .rating i {
-      color: gold;
-      /* Yellow filled star */
-      font-size: 18px;
-    }
 
     /* Arrows */
     .arrow {
