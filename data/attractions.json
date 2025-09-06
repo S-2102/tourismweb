@@ -1,0 +1,283 @@
+
+[
+  {
+    "id": "at1",
+    "name": "Tiger Hill",
+    "rating": 4.5,
+    "address": "Tiger Hill, Darjeeling District, West Bengal 734101, India",
+    "lat": 26.99656,
+    "lon": 88.29441,
+     "images": [
+      "/images/Gallery/sunrise.jpg",
+      "/images/Gallery/tiger-hill-mountain-view.png.jpg"
+    ],
+    "description": "Famous sunrise viewpoint offering breathtaking views of Kanchenjunga and, on clear days, even Mount Everest.",
+    "hours": "4:00 AM - 6:00 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at2",
+    "name": "Batasia Loop",
+    "rating": 4.5,
+    "address":"Batasiya View Point, West Point, Ghoom, Darjeeling, West Bengal 734102",
+    "lat": 27.0167,
+    "lon": 88.2471,
+     "images": [
+      "/images/Gallery/batasialoopview.jpg",
+      "/images/places/batasia loop/batasia loop statue.jpg"
+    ],
+    "description": "Scenic railway loop with landscaped gardens and a Gorkha War Memorial; ideal for panoramic views.",
+    "hours": "6:00 AM - 5:00 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at3",
+    "name": "Darjeeling Himalayan Railway (Toy Train)",
+    "rating": 4.2,
+    "address": "Darjeeling Railway Station, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0378,
+    "lon": 88.2630,
+     "images": [
+      "/images/places/toytrain/train.webp",
+      "/images/places/toytrain/toytrainView.jpg",
+      "/images/places/toytrain/toytrainView.jpg",
+      "/images/places/toytrain/toy train image.jpg",
+      "/images/places/toytrain/toytrain.jpg",
+      "/images/places/toytrain/toytrain 2.jpg",
+      "/images/places/toytrain/toytrainView.jpg",
+      "/images/Gallery/toy-train.jpg",
+      "/images/Gallery/toytrain 1.jpg"
+    ],
+    "description": "UNESCO World Heritage narrow-gauge railway offering a nostalgic, scenic ride through hills and tea gardens.",
+    "hours": "7:00 AM - 4:00 PM (train timings vary)",
+    "contact": "+91-354-225-2555"
+  },
+  {
+    "id": "at4",
+    "name": "Padmaja Naidu Himalayan Zoological Park",
+    "rating": 4.6,
+    "address": "Jawahar Parbat, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0506,
+    "lon": 88.2595,
+     "images": [
+      "/images/Gallery/zooPanda.jpg",
+      "/images/Gallery/zoological-park-view.jpg"
+    ],
+    "description": "High-altitude zoo renowned for conservation of Himalayan species like red pandas and snow leopards.",
+    "hours": "8:30 AM - 4:30 PM (Closed Thursday)",
+    "contact": "+91-354-225-3760"
+  },
+  {
+    "id": "at5",
+    "name": "Himalayan Mountaineering Institute",
+    "rating": 4.6,
+    "address": "Jawahar Parbat, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0508,
+    "lon": 88.2592,
+     "images": [
+      "/images/places/Mountaineering-Institute/HMI.webp",
+      "/images/places/Mountaineering-Institute/HMI-image.webp",
+      "/images/places/Mountaineering-Institute/Mountaineering.jpg",
+      "/images/places/Mountaineering-Institute/entry.webp",
+      "/images/places/Mountaineering-Institute/statue.webp",
+      "/images/places/Mountaineering-Institute/knots.webp"
+    ],
+    "description": "Museum and training institute dedicated to mountaineering and Tenzing Norgay’s legacy.",
+    "hours": "9:00 AM - 5:00 PM (Closed Tuesday)",
+    "contact": "+91-354-225-4083"
+  },
+  {
+    "id": "at6",
+    "name": "Peace Pagoda",
+    "rating": 4.5,
+    "address": "27H5+9R2, Rajbari, Darjeeling, West Bengal 734101",
+    "lat": 27.0287502,
+    "lon": 88.2594609,
+     "images": [
+      "/images/places/japanesetemple/japanese temple.jpg",
+      "/images/places/japanesetemple/japanese temple 2.jpg",
+      "/images/places/japanesetemple/supratik-deshmukh-57zZADm8pcY-unsplash.jpg"
+    ],
+    "description": "Japanese Buddhist stupa promoting peace, offering tranquil ambiance and panoramic views.",
+    "hours": "4:30 AM - 7:00 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at7",
+    "name": "Rock Garden & Ganga Maya Park",
+    "rating": 4.5,
+    "address": "Chunnu Summer Falls, Darjeeling, West Bengal 734102, India",
+    "lat": 27.0080,
+    "lon": 88.2506,
+     "images": [
+      "/images/places/rockgarden/rockgarden 2.jpg",
+      "/images/places/rockgarden/rockgarden.jpg",
+      "/images/places/rockgarden/rg.jpg"
+    ],
+    "description": "Terraced waterfall garden ideal for picnics and nature walks.",
+    "hours": "8:00 AM - 6:00 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at8",
+    "name": "Darjeeling Ropeway",
+    "rating": 4.4,
+    "address": "Singamari, Darjeeling, West Bengal 734104, India",
+    "lat": 27.0286,
+    "lon": 88.2623,
+     "images": [
+      "/images/Gallery/Ropeway.jpg",
+      "/images/places/ropeway/Ropeway_Darjeeling_Photo.jpg.jpg",
+      "/images/places/ropeway/darjeeling-ropeway.jpg"
+    ],
+    "description": "Cable car offering breathtaking aerial views of valleys, waterfalls, and tea estates.",
+    "hours": "10:00 AM - 4:00 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at9",
+    "name": "Happy Valley Tea Estate",
+    "rating": 4.4,
+    "address": "Lebong Cart Road, Darjeeling, West Bengal 734105, India",
+    "lat": 27.0564,
+    "lon": 88.2608,
+     "images": [
+      "/images/places/Happy-Valley/Happy_Valley_Tea_Estate.jpg",
+      "/images/places/Happy-Valley/makaibari.avif",
+      "/images/places/Happy-Valley/image.jpeg",
+      "/images/places/Happy-Valley/Happyvalley.jpg"
+    ],
+    "description": "Historic tea estate offering guided tours, tastings, and scenic plantation views.",
+    "hours": "9:00 AM - 4:30 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at10",
+    "name": "Observatory Hill & Mahakal Temple",
+    "rating": 4.4,
+    "address": "Observatory Hill, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0430,
+    "lon": 88.2628,
+     "images": [
+      "/images/places/Mahakal-Temple/MahakalTemple.jpg"
+    ],
+    "description": "Sacred hilltop site with Hindu and Buddhist shrines and sweeping views of Darjeeling.",
+    "hours": "8:00 AM - 5:30 PM",
+    "contact": "N/A"
+  },
+  {
+    "id": "at11",
+    "name": "Bhutia Busty Monastery",
+    "rating": 4.5,
+    "address": "Bhutia Busty, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0502,
+    "lon": 88.2657,
+     "images": [
+      "/images/places/Bhutia-Busty-Gompa/bhutia-busty-gompa-monasteryview.jpg",
+      "/images/places/Bhutia-Busty-Gompa/bhutia-busty-gompa-monasteryfront.jpg",
+      "/images/places/Bhutia-Busty-Gompa/bhutia-busty-gompa-monastery.jpg",
+      "/images/places/Bhutia-Busty-Gompa/the-entrance-gate.jpg"
+    ],
+    "description": "Historic Buddhist monastery featuring scriptures and traditional architecture.",
+    "hours": "7:00 AM - 5:00 PM",
+    "contact": "1800 212 1655"
+  },
+  {
+    "id": "at12",
+    "name": "St. Andrew's Church",
+    "rating": 4.4,
+    "address": "Mall Road, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0423,
+    "lon": 88.2641,
+     "images": [
+      "/images/places/St.Andrew's-Church/view-of-church.webp",
+      "/images/places/St.Andrew's-Church/church-decoration.webp",
+      "/images/places/St.Andrew's-Church/church.webp",
+      "/images/places/St.Andrew's-Church/churchhall.webp"
+    ],
+    "description": "Colonial-era Anglican church with beautiful stained-glass windows.",
+    "hours": "N/A",
+    "contact": "N/A"
+  },
+  {
+    "id": "at13",
+    "name": "Lloyd's Botanical Garden",
+    "rating": 4.2,
+    "address": "Chauk Bazaar, Darjeeling, West Bengal 734101, India",
+    "lat": 27.0433, 
+    "lon": 88.2631,
+     "images": [
+      "/images/places/lloyd-botanical-garden/lloyd-botanical-garden.jpg",
+      "/images/places/lloyd-botanical-garden/flowers.webp",
+      "/images/places/lloyd-botanical-garden/flowers-nursery.webp"
+    ],
+    "description": "Botanical garden showcasing rare Himalayan flora and orchids.",
+    "hours": "8:00 AM - 4:00 PM",
+    "contact": "+91 9733533578 / +91 7001715657"
+  },
+  {
+    "id": "at14",
+    "name": "Tibetan Refugee Self-Help Centre",
+    "rating": 4.4,
+    "address": "Havelock Villa, 119/B, Gandhi Rd, Darjeeling, West Bengal 734101",
+    "lat": 27.0532,
+    "lon": 88.2671,
+     "images": [
+      "/images/places/tibetan-refugee/Main.jpg",
+      "/images/places/tibetan-refugee/buddha-statue.webp",
+      "/images/places/tibetan-refugee/photos.webp",
+      "/images/places/tibetan-refugee/showroom.webp",
+      "/images/places/tibetan-refugee/carpet-weaving.webp",
+      "/images/places/tibetan-refugee/workshop.webp"
+    ],
+    "description": "Cultural center supporting Tibetan artisans and refugee community with handcrafts.",
+    "hours": "8:00 AM - 4:30 PM (Sunday - Closed)",
+    "contact": "0354 225 5938"
+  },
+  {
+    "id": "at15",
+    "name": "Bengal Natural History Museum",
+    "rating": 3.7,
+    "address": "Padmaja Naidu, Himalayan Zoological Park, Jawahar Parbat, Darjeeling, West Bengal 734101",
+    "lat": 27.0411,
+    "lon": 88.2654,
+     "images": [
+      "/images/places/bengal-natural-history/main.jpg",
+      "/images/places/bengal-natural-history/migratory-bird-model.jpg"
+    ],
+    "description": "Museum featuring collections of Himalayan fauna, fossils, and natural artifacts.",
+    "hours": "8:30 AM - 4:30 PM (Thursday - Closed)",
+    "contact": " 0354 225 3709"
+  },
+  {
+    "id": "at16",
+    "name": "Yiga Choeling Monastery",
+    "rating": 4.5,
+    "address": "Ghoom Monastery Rd, Darjeeling, Ghoom, West Bengal 734102",
+    "lat": 27.0086,
+    "lon": 88.2595,
+     "images": [
+      "/images/places/yiga-monastery/monastery-outside-view.jpg",
+      "/images/places/yiga-monastery/buddha.webp",
+      "/images/places/yiga-monastery/monastery.webp"
+    ],
+    "description": "One of the oldest Tibetan Buddhist monasteries, featuring a large Maitreya Buddha statue.",
+    "hours": "N/A",
+    "contact": "098324 24705"
+  },
+  {
+    "id": "at17",
+    "name": "Shrubbery Nightingale Park",
+    "rating": 4.4,
+    "address": "3736+F28, Richmond Hill, Darjeeling, West Bengal 734101",
+    "lat": 27.0421,
+    "lon": 88.2593,
+     "images": [
+      "/images/places/Shrubbery-Nightingale-Park/Nightingale.jpg",
+      "/images/places/Shrubbery-Nightingale-Park/Shrubbery-Nightingale-Park.jpg"
+    ],
+    "description": "Landscaped colonial-era park with evening music and cultural shows.",
+    "hours": "9:00 AM - 5:00 PM",
+    "contact": "N/A"
+  }
+]
