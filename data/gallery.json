@@ -27,22 +27,140 @@
     "title": "Happy Valley Tea Estate",
     "image": "/images/Gallery/Happyvalley.jpg"
   },
-    {
+  {
     "title": "Darjeeling",
     "image": "/images/Gallery/local-market.webp"
   },
   {
     "title": "Lloyd Botanical Garden",
-    "image": "/images/places/lloyd-botanical-garden/lloyd-botanical-garden.jpg"
+    "image": "/images/Gallery/lloyd-botanical-garden.jpg"
   },
   {
     "title": "Jamuney",
     "image": "/images/Gallery/Jamuni3.jpg"
   },
-   {
+  {
     "title": "Dali Monastery",
     "image": "/images/Gallery/dali-monastery.webp"
+  },
+  {
+    "title": "Zoo Panda",
+    "image": "/images/Gallery/zooPanda.jpg"
+  },
+  {
+    "title": "Food",
+    "image": "/images/Gallery/food.jpg"
+  },
+  {
+    "title": "Batasia Loop View",
+    "image": "/images/Gallery/batasialoopview.jpg"
+  },
+  {
+    "title": "Japanese Temple",
+    "image": "/images/Gallery/japanesetemple.jpg"
+  },
+  {
+    "title": "Ropeway",
+    "image": "/images/Gallery/Ropeway.jpg"
+  },
+  {
+    "title": "Tiger Hill",
+    "image": "/images/Gallery/Tigerhill.jpg"
+  },
+  {
+    "title": "Old Chowrasta",
+    "image": "/images/Gallery/oldchowrasta.jpg"
+  },
+  {
+    "title": "Toy Train View",
+    "image": "/images/Gallery/toytrainView.jpg"
+  },
+  {
+    "title": "Darjeeling West Bengal",
+    "image": "/images/Gallery/darjeeling-west-bengal.jpeg"
+  },
+  {
+    "title": "Happy Valley",
+    "image": "/images/Gallery/Happyvalley2.jpg"
+  },
+  {
+    "title": "Rock Garden",
+    "image": "/images/Gallery/rockGarden.jpg"
+  },
+  {
+    "title": "Migratory Bird Model",
+    "image": "/images/Gallery/migratory-bird-model.jpg"
+  },
+  {
+    "title": "Batasia Loop Toy Train",
+    "image": "/images/Gallery/batasialoopToytrain.jpg"
+  },
+  {
+    "title": "Darjeeling View",
+    "image": "/images/Gallery/DarjeelingView.jpg"
+  },
+  {
+    "title": "Red Panda",
+    "image": "/images/Gallery/redpanda.jpg"
+  },
+  {
+    "title": "Church Decoration",
+    "image": "/images/Gallery/church-decoration.webp"
+  },
+  {
+    "title": "Sunrise View",
+    "image": "/images/Gallery/sunrise.jpg"
+  },
+  {
+    "title": "Ropeway Darjeeling Photo",
+    "image": "/images/Gallery/Ropeway_Darjeeling_Photo.jpg"
+  },
+  {
+    "title": "Jamuni",
+    "image": "/images/Gallery/Jamuni2.jpg"
+  },
+  {
+    "title": "Batasia Loop",
+    "image": "/images/Gallery/batasialoop.jpg"
+  },
+  {
+    "title": "Zoo Bengal Tiger",
+    "image": "/images/Gallery/zoobengaltiger.jpg"
+  },
+  {
+    "title": "Daniel Dara",
+    "image": "/images/Gallery/daniel-dara-GMDG6KXzzu4-unsplash.jpg"
+  },
+  {
+    "title": "Statue",
+    "image": "/images/Gallery/statue.webp"
+  },
+  {
+    "title": "Church",
+    "image": "/images/Gallery/church.webp"
+  },
+  {
+    "title": "Himalayan Mountaineering Institute Image",
+    "image": "/images/Gallery/HMI-Image.webp"
+  },
+  {
+    "title": "Old Keventers & Planters",
+    "image": "/images/Gallery/oldKeventers&planters.jpg"
+  },
+  {
+    "title": "Tiger Hill Mountain View",
+    "image": "/images/Gallery/tiger-hill-mountain-view.png"
+  },
+  {
+    "title": "Church Hall",
+    "image": "/images/Gallery/churchhall.webp"
+  },
+  {
+    "title": "Himalayan Mountaineering Institute",
+    "image": "/images/Gallery/HMI.webp"
+  },
+  {
+    "title": "Toy Train",
+    "image": "/images/Gallery/toy-train.jpg"
   }
- 
-  
 ]

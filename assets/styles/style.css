@@ -24,6 +24,11 @@ h4 {
   font-family: var(--headfont);
   font-weight: bolder;
 }
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 #nav-bar a {
   text-decoration: none;
@@ -31,9 +36,7 @@ h4 {
   font-size: 1.5rem;
 }
 #nav-bar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
   background-color:var(--white);
   display: grid;
   grid-template: auto/ 1fr 2fr 1.5fr 1fr;

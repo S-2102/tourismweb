@@ -1,0 +1,12 @@
+<%- include("static/header.ejs") %>
+
+<div class="gallery">
+  <% gallery.forEach(item => { %>
+    <a href="<%= item.image %>" target="_blank" rel="noopener noreferrer" class="gallery-item">
+      <img src="<%= item.image %>" alt="<%= item.title %>" />
+      <div class="overlay"><%= item.title %></div>
+    </a>
+  <% }) %>
+</div>
+
+<%- include("static/footer.ejs") %>

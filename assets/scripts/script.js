@@ -85,6 +85,57 @@ window.addEventListener("resize", updateCarousel);
 // Initial load setup
 updateCarousel();
  
+// restaurants scroll
+document.addEventListener("DOMContentLoaded", () => {
+  // Elements
+  const restaurantSection = document.querySelector(".top-Restaurants");
+  const leftArrow = restaurantSection.querySelector(".arrow.left");
+  const rightArrow = restaurantSection.querySelector(".arrow.right");
+  const cardsContainer = restaurantSection.querySelector(".scroll-snap");
+  const cards = cardsContainer.querySelectorAll(".cardPlaces");
+
+  let activeIndex = 0;
+
+  function updateArrows() {
+    leftArrow.style.display = activeIndex === 0 ? "none" : "block";
+    rightArrow.style.display = activeIndex >= cards.length - 1 ? "none" : "block";
+  }
+
+  function scrollToCard(index) {
+    if (index < 0 || index >= cards.length) return;
+    activeIndex = index;
+
+    // Scroll container smoothly to the card's left position
+    const card = cards[activeIndex];
+    cardsContainer.scrollTo({
+      left: card.offsetLeft,
+      behavior: "smooth",
+    });
+
+    updateArrows();
+  }
+
+  leftArrow.addEventListener("click", () => {
+    if (activeIndex > 0) {
+      scrollToCard(activeIndex - 1);
+    }
+  });
+
+  rightArrow.addEventListener("click", () => {
+    if (activeIndex < cards.length - 1) {
+      scrollToCard(activeIndex + 1);
+    }
+  });
+
+  // Optional: On window resize, keep arrows updated
+  window.addEventListener("resize", () => {
+    updateArrows();
+  });
+
+  // Initialize arrows visibility
+  updateArrows();
+});
+
 
     // placedetails modal script
   document.addEventListener("DOMContentLoaded", () => {
