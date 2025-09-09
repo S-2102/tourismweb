@@ -1,45 +1,79 @@
 [
   {
     "id": "res1",
-    "name": "Kunga Restaurant",
-    "title": "Authentic Tibetan Food",
-    "rating": 4.7,
-    "address": "51 Gandhi Rd, Chauk Bazaar, Darjeeling, West Bengal 734101",
-    "lat": 27.0429,
-    "lon": 88.2637,
-    "images": ["/images/restaurants/kunga1.jpg", "/images/restaurants/kunga2.jpg"],
-    "description": "Cozy Tibetan eatery known for momos, thukpa, and authentic homemade dishes.",
-    "hours": "10:00 AM – 9:30 PM",
-    "contact": "+91 354 225 4660",
-    "priceRange": "₹200 – ₹500 per person"
+    "name": "Glenary's Bakery & Café",
+    "title": "Bakery and Cake Shop",
+    "rating": 4.4,
+    "address": "Nehru Rd, near Clock Tower, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "lat": 27.0418,
+    "lon": 88.2645,
+    "images": [
+      "/images/restaurants/glenarys/frontview.webp", 
+      "/images/restaurants/glenarys/g.webp",
+      "/images/restaurants/glenarys/the-view-from-the-restaurant.jpg",
+      "/images/restaurants/glenarys/sunset-at-the-restaurant.jpg",
+      "/images/restaurants/glenarys/glenary-s.jpg",
+      "/images/restaurants/glenarys/the-coffee-shop-deck.jpg",
+      "/images/restaurants/glenarys/the-newly-renovated-pub.jpg",
+      "/images/restaurants/glenarys/the-restaurant-deck.jpg",
+      "/images/restaurants/glenarys/the-restaurant.jpg",
+      "/images/restaurants/glenarys/glenary-s food.jpg",
+      "/images/restaurants/glenarys/the-restaurent.jpg"
+  ],
+    "description": "A heritage café offering bakery items, continental dishes, and a rooftop view of the mountains.",
+    "hours": "6:00 AM – 10:30 PM",
+    "contact": " 096351 62005",
+    "priceRange": "₹200 – ₹600 per person"
+    
   },
   {
     "id": "res2",
-    "name": "Glenary's Bakery & Café",
-    "title": "Iconic Bakery & Continental Food",
-    "rating": 4.6,
-    "address": "Nehru Road, Chauk Bazaar, Darjeeling, West Bengal 734101",
-    "lat": 27.0418,
-    "lon": 88.2645,
-    "images": ["/images/restaurants/glenarys/frontview.webp", "/images/restaurants/glenarys/g.webp"],
-    "description": "A heritage café offering bakery items, continental dishes, and a rooftop view of the mountains.",
-    "hours": "8:00 AM – 9:00 PM",
-    "contact": "+91 354 225 8408",
-    "priceRange": "₹300 – ₹700 per person"
+    "name": "Kunga Restaurant",
+    "title": "Continental Restaurant",
+    "rating": 4.3,
+    "address": "51 Gandhi Rd, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "lat": 27.0429,
+    "lon": 88.2637,
+    "images": [
+      "/images/restaurants/kunga/kungaInside.jpg", 
+      "/images/restaurants/kunga/kunga-restaurant.jpg",
+      "/images/restaurants/kunga/food.webp",
+      "/images/restaurants/kunga/menuhightlights-chickenThukpa.webp",
+      "/images/restaurants/kunga/menuhightlights-chinesenoodles.webp",
+      "/images/restaurants/kunga/menuhightlights-glassNoodles.webp",
+      "/images/restaurants/kunga/menuhightlights-tibetanTingMomo.webp",
+      "/images/restaurants/kunga/momo.webp",
+      "/images/restaurants/kunga/thenthuk.webp",
+      "/images/restaurants/kunga/chicken-thhukpa.webp"
+    ],
+    "description": "Cozy Tibetan eatery known for momos, thukpa, and authentic homemade dishes.",
+    "hours": "10:00 AM – 6:00 PM",
+    "contact": "++91 96798 89365",
+    "priceRange": "₹200 – ₹400 per person"
+    
   },
   {
     "id": "res3",
     "name": "Sonam's Kitchen",
-    "title": "Famous for Pancakes & Breakfast",
+    "title": "Continental Restaurant",
     "rating": 4.5,
-    "address": "Zakaria Street, Near Hotel Valentino, Darjeeling, West Bengal 734101",
+    "address": "27V9+249, Dr Zakir Hussain Rd, Chaurasta, Darjeeling, West Bengal 734101",
     "lat": 27.0432,
     "lon": 88.2642,
-    "images": ["/images/restaurants/sonams1.jpg", "/images/restaurants/sonams2.jpg"],
+    "images": [
+      "/images/restaurants/sonam's-Kitchen/sonam-s-kitchen.jpg",
+      "/images/restaurants/sonam's-Kitchen/breakfast-set-a.jpg",
+      "/images/restaurants/sonam's-Kitchen/coffee.webp",
+      "/images/restaurants/sonam's-Kitchen/FrenxhToast-FluffyOmellete.jpg",
+      "/images/restaurants/sonam's-Kitchen/pancakes.jpg",
+     "/images/restaurants/sonam's-Kitchen/bitter-gourd-and-fennel.jpg",
+     
+      "/images/restaurants/sonam's-Kitchen/menu.jpg"
+    ],
     "description": "Cozy spot for hearty breakfast, pancakes, omelettes, and coffee.",
-    "hours": "8:00 AM – 2:00 PM",
-    "contact": "+91 354 225 7835",
-    "priceRange": "₹150 – ₹400 per person"
+    "hours": "8:00 AM – 2:00 PM, 5:30 AM – 8:30 PM",
+    "contact": "+91 92325 63654",
+    "priceRange": "₹200 – ₹400 per person"
   },
   {
     "id": "res4",
@@ -49,40 +83,66 @@
     "address": "Nehru Road, Darjeeling, West Bengal 734101",
     "lat": 27.0415,
     "lon": 88.2642,
-    "images": ["/images/restaurants/keventers1.jpg", "/images/restaurants/keventers2.jpg"],
+    "images": [
+      "/images/restaurants/keventer's/kev-location.jpg", 
+      "/images/restaurants/keventer's/rooftop.webp",
+      "/images/restaurants/keventer's/menuhighlights-HotChocolateCoffee.webp",
+      "/images/restaurants/keventer's/menuhighlights-porkplatter-sausage-omelete.jpg",
+      "/images/restaurants/keventer's/menuhighlights-porkplatter-withegg.jpg",
+      "/images/restaurants/keventer's/menuhighlights-DarjeelingTea.webp",
+      "/images/restaurants/keventer's/menuhighlights-ChickenSalamiSandwich.webp",
+      "/images/restaurants/keventer's/menuhighlights-IceCream.webp",
+      "/images/restaurants/keventer's/beverages-menu.png",
+      "/images/restaurants/keventer's/breakfast-menu.png",
+      "/images/restaurants/keventer's/non-veg-snacks-menu.png",
+      "/images/restaurants/keventer's/veg-snacks-menu.png",
+      "/images/restaurants/keventer's/Pork-Specialities-for-Breakfast&Snacks-menu.png"
+    ],
     "description": "Colonial-era café famous for breakfast platters, sausages, and rooftop tea.",
-    "hours": "8:00 AM – 8:00 PM",
-    "contact": "+91 354 225 1964",
-    "priceRange": "₹250 – ₹600 per person"
+    "hours": "8:00 AM – 6:00 PM (Thursday - Closed)",
+    "contact": "+91 354 225 6542",
+    "priceRange": "₹200 – ₹400 per person"
   },
   {
     "id": "res5",
     "name": "Tom & Jerry's",
-    "title": "Cozy Café with International Flavors",
-    "rating": 4.4,
-    "address": "Dr. Zakir Hussain Rd, Darjeeling, West Bengal 734101",
+    "title": "Cozy Café",
+    "rating": 4.5,
+    "address": "Dr Zakir Hussain Rd, Tungsung Basti, Darjeeling, Pandam Tea Garden, West Bengal 734201",
     "lat": 27.0430,
     "lon": 88.2639,
-    "images": ["/images/restaurants/tomjerry1.jpg", "/images/restaurants/tomjerry2.jpg"],
+    "images": [
+      "/images/restaurants/Tom&Jerry-Cafe/view.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/Cafe.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/interior.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/tom&jerryCafe.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/Tom&Jerry.jpg", 
+      "/images/restaurants/Tom&Jerry-Cafe/bookshelf.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/menuhighlights-Chicken-Ramen.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/menuhighlights-Chicken-Thenthuk.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/menuhighlights-chicken-Sandwich.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/menuhighlights-Jumbo-Chicken-Burger.webp"
+    ],
     "description": "Small café serving pasta, sandwiches, shakes, and friendly vibes.",
-    "hours": "9:00 AM – 9:00 PM",
-    "contact": "+91 99332 21542",
-    "priceRange": "₹200 – ₹500 per person"
+    "hours": "9:00 AM – 8:00 PM",
+    "contact": "077184 07442",
+    "priceRange": "₹200 – ₹400 per person"
   },
   {
     "id": "res6",
     "name": "Shangri-La Restaurant",
     "title": "Multi-cuisine Dining in Darjeeling",
-    "rating": 4.3,
+    "rating": 3.6,
     "address": "5 Nehru Road, Darjeeling, West Bengal 734101",
     "lat": 27.0419,
     "lon": 88.2639,
     "images": ["/images/restaurants/shangrila1.jpg", "/images/restaurants/shangrila2.jpg"],
     "description": "Serving Indian, Chinese, and Continental food in a warm setting.",
-    "hours": "10:00 AM – 10:00 PM",
-    "contact": "+91 354 225 3263",
-    "priceRange": "₹400 – ₹800 per person"
+    "hours": "N/A",
+    "contact": "+91 354 225 5466",
+    "priceRange": "N/A"
   },
+  
   {
     "id": "res7",
     "name": "Hot Stimulating Café",
@@ -93,37 +153,40 @@
     "lon": 88.2478,
     "images": ["/images/restaurants/hotstimulating1.jpg", "/images/restaurants/hotstimulating2.jpg"],
     "description": "Famous roadside café serving momos, wai-wai, and special ginger tea.",
-    "hours": "10:00 AM – 8:00 PM",
-    "contact": "+91 99320 43512",
-    "priceRange": "₹100 – ₹300 per person"
+    "hours": "10:00 AM – 7:00 PM",
+    "contact": "099322 60769",
+    "priceRange": "₹1 - ₹200"
   },
   {
     "id": "res8",
     "name": "Frank Ross Café",
     "title": "Vegetarian Café & Bakery",
-    "rating": 4.2,
-    "address": "Nehru Road, Near Clock Tower, Darjeeling, West Bengal 734101",
+    "rating": 3.3,
+    "address": "27V8+7RX, Nehru Rd, Chauk Bazaar, Darjeeling, West Bengal 734101",
     "lat": 27.0416,
     "lon": 88.2638,
-    "images": ["/images/restaurants/frankross1.jpg", "/images/restaurants/frankross2.jpg"],
+    "images": [
+      "/images/restaurants/frankross1.jpg", 
+      "/images/restaurants/frankross2.jpg"
+    ],
     "description": "Vegetarian café famous for pastries, sandwiches, and light meals.",
-    "hours": "9:00 AM – 8:00 PM",
-    "contact": "+91 354 225 2651",
-    "priceRange": "₹200 – ₹500 per person"
+    "hours": "8:30 AM – 8:00 PM",
+    "contact": "+91 354 225 8194",
+    "priceRange": "₹200 – ₹400 per person"
   },
   {
     "id": "res9",
     "name": "Penang Restaurant",
-    "title": "Authentic Nepali & Bhutanese Cuisine",
+    "title": "Nepalese restaurant",
     "rating": 4.2,
-    "address": "Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "address": "11 Ladenla Road Opposite To Inox Opposite to Inox, Darjeeling 734101 India",
     "lat": 27.0421,
     "lon": 88.2643,
     "images": ["/images/restaurants/penang1.jpg", "/images/restaurants/penang2.jpg"],
     "description": "Known for its authentic Nepali and Bhutanese cuisine.",
     "hours": "11:00 AM – 9:00 PM",
-    "contact": "+91 354 225 4751",
-    "priceRange": "₹250 – ₹600 per person"
+    "contact": "+91 354 225 3044",
+    "priceRange": "₹200 – ₹400 per person"
   },
   {
     "id": "res10",
@@ -144,13 +207,13 @@
     "name": "The Park Restaurant",
     "title": "Indian & Chinese Food",
     "rating": 4.1,
-    "address": "Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "address": "27R8+773, Laden la Rd, opp. state bank of india, Chauk Bazaar, Darjeeling, West Bengal 734101",
     "lat": 27.0417,
     "lon": 88.2637,
     "images": ["/images/restaurants/park1.jpg", "/images/restaurants/park2.jpg"],
     "description": "Casual family restaurant serving Indian and Chinese meals.",
-    "hours": "11:00 AM – 10:00 PM",
-    "contact": "+91 354 225 4952",
+    "hours": "11:00 AM – 9:30 PM",
+    "contact": "+91 354 225 5270",
     "priceRange": "₹250 – ₹600 per person"
   },
   {
@@ -208,5 +271,29 @@
     "hours": "10:00 AM – 9:00 PM",
     "contact": "+91 99332 21467",
     "priceRange": "₹150 – ₹400 per person"
+  },
+  {
+    "id": "res14",
+    "name": "SuzAm's Cafe n Kitchen",
+    "title": "Cafe",
+    "rating": 4.8,
+    "address": "Rope Way, Darjeeling 734104 India",
+    "lat": 27.0428,
+    "lon": 88.2636,
+    "images": [
+      "/images/restaurants/Suzam's/view-from-rooftop.jpg", 
+      "/images/restaurants/Suzam's/main-cozy-room.jpg", 
+      "/images/restaurants/Suzam's/rooftop-night.jpg", 
+      "/images/restaurants/Suzam's/inside-suzam's.jpg", 
+      "/images/restaurants/Suzam's/rooftop.jpg", 
+      "/images/restaurants/Suzam's/suzam-s-cafe-n-kitchen-coffee.jpg", 
+      "/images/restaurants/Suzam's/egg-friedrice.jpg", 
+      "/images/restaurants/Suzam's/chowmein.jpg", 
+      "/images/restaurants/Suzam's/frenchfries.jpg"
+  ],
+    "description": "Serving Mughlai, kebabs, and tandoori dishes in a modern setting.",
+    "hours": "9:00 AM – 7:30 PM",
+    "contact": "+91 86187 13750",
+    "priceRange": "₹200 – ₹400 per person"
   }
 ]
