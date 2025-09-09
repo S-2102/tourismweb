@@ -27,7 +27,7 @@ const topAttractions = attractions
   .slice(0, 9);
 
 const topRestaurants = restaurants
-  .filter(place => place.rating > 4.4)
+  .filter(place => place.rating > 4.0)
   .slice(0, 9);
 
 app.get("/", (req, res) => {
@@ -48,8 +48,14 @@ app.get("/placedetails/:id", (req, res) => {
   res.render("placedetails.ejs", { place });
 });
 
-app.get("/placelist", (req, res) => {
-  res.render("placelist.ejs");
+app.get("/attractionslist", (req, res) => {
+  res.render("attractionslist.ejs",{attractions});
+});
+app.get("/restaurantslist", (req, res) => {
+  res.render("restaurantslist.ejs",{restaurants});
+});
+app.get("/gallery", (req, res) => {
+  res.render("gallery.ejs",{gallery});
 });
 
 app.get("/favourites", (req,res)=>{
