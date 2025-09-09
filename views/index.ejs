@@ -1,124 +1,236 @@
-  <%- include("static/header.ejs") %>
-  <section class="hero-section">
-    <div class="container-fluid">
-
-      <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel"
-        data-bs-touch="true">
-        <div class="carousel-indicators">
-          <button type="button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-            class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-          <button type="button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
+<%- include("static/header.ejs") %>
+<section class="hero-section">
+  <div class="container-fluid">
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-touch="true"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/images/Gallery/batasialoopToytrain.jpg"
+            class="d-block w-100"
+            alt="Himalayan Toy Train"
+          />
+          <div class="dark-overlay"></div>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/images/Gallery/batasialoopToytrain.jpg" class="d-block w-100" alt="Himalayan Toy Train">
-            <div class="dark-overlay"></div>
-          </div>
-          <div class="carousel-item">
-            <img src="/images/places/japanesetemple/supratik-deshmukh-57zZADm8pcY-unsplash.jpg"
-              class="d-block w-100" alt="...">
-              <div class="dark-overlay"></div>
-          </div>
-          <div class="carousel-item">
-            <img src="/images/Gallery/kanchenjungha.jpg" class="d-block w-100" alt="...">
-            <div class="dark-overlay"></div>
-          </div>
+        <div class="carousel-item">
+          <img
+            src="/images/places/japanesetemple/supratik-deshmukh-57zZADm8pcY-unsplash.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="dark-overlay"></div>
         </div>
-
+        <div class="carousel-item">
+          <img
+            src="/images/Gallery/kanchenjungha.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="dark-overlay"></div>
+        </div>
       </div>
     </div>
-  </section>
-  <!-- explore -->
-  <section class="explore">
-    <div class="explore-title">
-      <h2>Top Attractions</h2> <button type="button" class="button"><a href="/placelist">Explore All</a></button>
-    </div>
+  </div>
+</section>
+<!-- explore -->
+<section class="explore">
+  <h2>Top Attractions</h2>
+  <p class="subtitle">Discover the Heart of the City, One Landmark at a Time.</p>
 
-    <div class="top-attractions">
-      <div class="carousel-attractions-container">
-        <button type="button" class="arrow left leftArrow">&#8592;</button>
-        <div class="carousel-attractions-attractions-track">
+  <div class="top-attractions">
+    <div class="carousel-attractions-container">
+      <button type="button" class="arrow left" id="leftArrow">&#8592;</button>
+      <div class="carousel-attractions-attractions-track">
         <% topAttractions.forEach(attraction=>{ %>
-          <a href="/placedetails/<%= attraction.id %>" class="carousel-attractions-card">
-            <img src="<%= attraction.images[0] %>" alt="<%= attraction.name %>" />
-            <button type="button" class="save-button"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-                <path
-                  d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-              </svg></button>
-            <p class="attractions-title"><%= attraction.name %></p>
-          </a>
-       <% }) %>
-        </div>
-        <button type="button" class="arrow right rightArrow">&#8594;</button>
+        <a
+          href="/placedetails/<%= attraction.id %>"
+          class="carousel-attractions-card"
+        >
+          <img src="<%= attraction.images[0] %>" alt="<%= attraction.name %>" />
+          <button type="button" class="save-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
+              />
+            </svg>
+          </button>
+          <p class="attractions-title"><%= attraction.name %></p>
+        </a>
+        <% }) %>
       </div>
+      <button type="button" class="arrow right" id="rightArrow">&#8594;</button>
     </div>
+  </div>
+  <button type="button" class="button">
+  <a href="/attractionslist">Explore All</a>
+</button>
 
-    <!-- restaurants -->
-    <div class="explore-title">
-      <h2>Where to eat in Darjeeling? </h2> <button type="button" class="button"><a href="/placelist">Explore
-          All</a></button>
-    </div>
+  <!-- restaurants -->
+  <div class="top-Restaurants">
+    <h2>Dine & Discover</h2>
+    <p class="subtitle">Taste authentic flavors, from street bites to fine dining.</p>
     <div class="TopPlaces">
-      <button type="button" class="arrow left leftArrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-          viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-          <path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z" />
-        </svg></button>
+      <button type="button" class="arrow left" id="leftArrow">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#FFFFFF"
+        >
+          <path
+            d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"
+          />
+        </svg>
+      </button>
       <div class="scroll-snap">
         <% topRestaurants.forEach(place=>{ %>
         <a href="/placedetails/<%= place.id %>">
           <div class="cardPlaces">
-            <img class="cardImage" id="<%= place.id %>" src="<%= place.images[0] %>"
-              alt="<%= place.name %>" />
-            <button type="button" class="save-button"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+            <img
+              class="cardImage"
+              id="<%= place.id %>"
+              src="<%= place.images[0] %>"
+              alt="<%= place.name %>"
+            />
+            <button type="button" class="save-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#FFFFFF"
+              >
                 <path
-                  d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z" />
-              </svg></button>
+                  d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
+                />
+              </svg>
+            </button>
+            <div class="restaurant-details">
               <h3 class="placeTitle"><%= place.name %></h3>
-              <p class="rating"><img src="/icons/staricon.svg" /><%= place.rating %></p>
+              <p class="location-details">
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="14px"
+                  height="12px"
+                  viewBox="0 0 425.963 425.963"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  fill="#059212"
+                  transform="rotate(0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        d="M213.285,0h-0.608C139.114,0,79.268,59.826,79.268,133.361c0,48.202,21.952,111.817,65.246,189.081 c32.098,57.281,64.646,101.152,64.972,101.588c0.906,1.217,2.334,1.934,3.847,1.934c0.043,0,0.087,0,0.13-0.002 c1.561-0.043,3.002-0.842,3.868-2.143c0.321-0.486,32.637-49.287,64.517-108.976c43.03-80.563,64.848-141.624,64.848-181.482 C346.693,59.825,286.846,0,213.285,0z M274.865,136.62c0,34.124-27.761,61.884-61.885,61.884 c-34.123,0-61.884-27.761-61.884-61.884s27.761-61.884,61.884-61.884C247.104,74.736,274.865,102.497,274.865,136.62z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+                <%= place.address %>
               </p>
+            </div>
+            <p class="rating">
+              <img src="/icons/staricon.svg" /><%= place.rating %>
+            </p>
           </div>
         </a>
         <% }) %>
       </div>
-      <button type="button" class="arrow right rightArrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-          viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-          <path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z" />
+      <button type="button" class="arrow right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"
+          />
         </svg>
       </button>
     </div>
-  </section>
+    <button type="button" class="button">
+      <a href="/restaurantslist">Explore All</a>
+    </button>
+  </div>
+</section>
 
-  <!-- gallery -->
-   <section id="gallery">
-    <h2>Our Stunning Gallery</h2>
-    <p class="subtitle">Explore moments captured in beautiful snapshots</p>
-    <div class="container">
-      <div class="swiper gallery-slider">
-        <div class="swiper-wrapper">
-          <% gallery.forEach(item => { %>
-            <div class="swiper-slide gallery-slide">
-              <div class="gallery-slide-img">
-                <img src="<%= item.image %>" alt="<%= item.title %>" />
-
-              </div>
-                <div class="gallery-slide-content-bottom">
-                  <h2 class="image-name"><%= item.title %></h2>
-                </div>
-            </div>
-          <% }) %>
+<!-- gallery -->
+<section id="gallery">
+  <h2>Our Stunning Gallery</h2>
+  <p class="subtitle">Explore moments captured in beautiful snapshots</p>
+  <div class="container">
+    <div class="swiper gallery-slider">
+      <div class="swiper-wrapper">
+        <% gallery.slice(0,12).forEach(item => { %>
+        <div class="swiper-slide gallery-slide">
+          <div class="gallery-slide-img">
+            <img src="<%= item.image %>" alt="<%= item.title %>" />
+          </div>
+          <div class="gallery-slide-content-bottom">
+            <h3 class="image-name"><%= item.title %></h3>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <% }) %>
       </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-  </section>
+  </div>
+</section>
 
 <%- include("static/footer.ejs") %>

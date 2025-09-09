@@ -57,14 +57,14 @@ function updateCarousel() {
   });
 
   // Optional: hide/show arrows depending on position
-  document.querySelector(".leftArrow").style.display =
+  document.querySelector("#leftArrow").style.display =
     activeIndex === 0 ? "none" : "block";
-  document.querySelector(".rightArrow").style.display =
+  document.querySelector("#rightArrow").style.display =
     activeIndex === cards.length - 1 ? "none" : "block";
 }
 
 // Right arrow → move forward
-document.querySelector(".rightArrow").addEventListener("click", () => {
+document.querySelector("#rightArrow").addEventListener("click", () => {
   if (activeIndex < cards.length - 1) {
     activeIndex++;
     updateCarousel();
@@ -72,7 +72,7 @@ document.querySelector(".rightArrow").addEventListener("click", () => {
 });
 
 // Left arrow → move backward
-document.querySelector(".leftArrow").addEventListener("click", () => {
+document.querySelector("#leftArrow").addEventListener("click", () => {
   if (activeIndex > 0) {
     activeIndex--;
     updateCarousel();
