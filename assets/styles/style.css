@@ -2,48 +2,39 @@
 :root {
   --headfont: "Libertinus Serif", serif;
   --darkgreen: #1c352d;
+  --forestgreen: #1b4332;
+  --naturegreen: #2d6a4f;
+  --gold: #ffd166;
+  --white: #f8f9fa;
+  --text-dark: #333;
+  --text-light: #777;
 }
 /* save-button toggle */
-.fill-red{
-  fill:red;
-}
-html, body, header {
-  height: auto;
-  min-height: 100%;
+.fill-red {
+  fill: red;
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
 }
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--headfont);
   font-weight: bolder;
+}
+
+#nav-bar a {
+  text-decoration: none;
   color: var(--darkgreen);
-}
- a{
-    text-decoration: none;
-    color: var(--darkgreen);
-  }
-header{
-   position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #ec994b;
-  font-weight: 700;
-}
-p.subtitle {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #555;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #nav-bar {
-
-  background-color:  white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color:var(--white);
   display: grid;
   grid-template: auto/ 1fr 2fr 1.5fr 1fr;
   box-sizing: border-box;
@@ -61,7 +52,7 @@ p.subtitle {
 }
 
 .navigation {
-  display: flex;    
+  display: flex;
   padding-left: 0px;
   margin-bottom: 0px;
   gap: 1.7rem;
@@ -73,7 +64,7 @@ p.subtitle {
 #search-bar {
   width: 100%;
   padding: 0.3rem 1.2rem;
-  background-color: #edecec;
+  background-color: var(white);
   border: 2px solid var(--darkgreen);
   border-radius: 40px;
   outline: none;
@@ -83,29 +74,31 @@ p.subtitle {
   top: 3px;
   right: 10px;
   border: none;
-  background:none;
+  background: none;
   cursor: pointer;
 }
 #search-bar:focus {
   outline: none;
-  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); */
 }
-.button a{
-  color: #fff;
+.button a {
+  color: var(--darkgreen);
 }
-.button{
-  padding: 0.3rem 1rem;
+.button {
+  width: auto;
+  margin: 0.5rem auto;
+  padding: 1rem 1.5rem;
   border-radius: 6px;
-  background-color: var(--darkgreen);
-  border: none;
-  color: white;
+  border: 1px solid var(--gold);
+  background-color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 480;
   transition: background-color 0.3s, color 0.3s;
 }
 .button:hover {
-  background-color:#12211c ;
+  background-color: var(--gold);
 }
 
-.menu-item{
+.menu-item {
   border-bottom: 2px solid transparent;
 }
 .menu-item:hover {
@@ -119,253 +112,256 @@ p.subtitle {
   z-index: inherit;
 }
 .navigation.show {
-  display:block ;
+  display: block;
   z-index: 1000;
- 
 }
 
-
 /* carousel */
-.container-fluid{
-    margin: 0;
-    padding: 0;
-  }
-  
-  #carouselExampleAutoplaying {
-    margin: 0;
-    padding:0;
-    /* Full viewport minus navbar */
-  }
-  
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+#carouselExampleAutoplaying {
+  margin: 0;
+  padding: 0;
+  /* Full viewport minus navbar */
+}
+
 .dark-overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4); /* adjust darkness here */
+  background: rgba(0, 0, 0, 0.2); /* adjust darkness here */
+  z-index: 1;
+}
+#carouselExampleAutoplaying {
+  height: 100%;
+}
+#carouselExampleAutoplaying .carousel-inner {
+  z-index: 0;
+  height: 100%;
+}
+.carousel-item img {
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* explore */
+.explore {
+  margin-top: 3.5rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2d6a4f;
+  font-weight: 700;
+  font-size: 4rem;
+}
+p.subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+/* attractions carousel */
+
+.top-attractions{
+  font-family: var(--headfont);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  height: auto;
+  overflow: hidden;
+  margin-top: 4rem ;
+}
+
+.carousel-attractions-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.carousel-attractions-attractions-track {
+  display: flex;
+  transition: transform 0.6s ease;
+  align-items: center;
+}
+
+.carousel-attractions-card {
+  position: relative;
+
+  flex: 0 0 66%;
+  margin: 0 1rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.8;
+  transform: scale(0.85);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.carousel-attractions-card > img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.attractions-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  padding: 20px 0;
+  margin: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  /* smooth gradient */
+  color:var(--white);
+  font-family: var(--headfont);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  /* improves text visibility */
+  box-sizing: border-box;
+}
+
+/* Active spotlight card */
+.carousel-attractions-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+/* restaurant cards */
+.top-Restaurants{
+  margin-top:4rem;
+  display: flex;
+  flex-direction: column;
+}
+.cardPlaces {
+  width: 250px;
+  margin-top: 2rem;
+  height: 350px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 10px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: relative;
+}
+
+.cardImage {
+  height: 70%;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+}
+
+.cardPlaces:hover {
+  scale: 1.02;
+}
+.description {
+  margin-top: 0.5rem;
+}
+
+.TopPlaces {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
   z-index: 1;
 }
 
-  #carouselExampleAutoplaying .carousel-inner {
-    z-index: 0;
-    height: 100%;
-  }
-  .carousel-item img{
-    height: 90vh;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-/* explore */
-    .explore {
-      margin-top: 3.5rem;
-      padding: 0 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-     .explore-title {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid var(--darkgreen);
-      padding-bottom: 0.5rem;
-    }
-/* attractions carousel */
+.scroll-snap {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
 
-    .top-attractions {
-      font-family: var(--headfont);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 0;
-      height: auto;
-      overflow: hidden;
-    }
+.scroll-snap::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
 
-    .carousel-attractions-container {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      overflow: hidden;
-    }
+.restaurant-details {
+  padding: 5px;
+}
+.cardPlaces .restaurant-details h3.placeTitle {
+  margin-top: 0.4rem;
+  font-size: 1.7rem;
+}
+.cardPlaces .restaurant-details p {
+  font-size: 12px;
+}
 
-    .carousel-attractions-attractions-track {
-      display: flex;
-      transition: transform 0.6s ease;
-      align-items: center;
-    }
+.cardPlaces .rating {
+  position: absolute;
+  top: 21.2rem;
+  left: 1rem;
+  padding: 4px 7px;
+  border-radius: 30px;
+  background-color: var(--darkgreen);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9.5px;
+}
 
-    .carousel-attractions-card {
-      position: relative;
-      
-      flex: 0 0 70%;
-      margin: 0 1rem;
-      border-radius: 0.3rem;
-      overflow: hidden;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-      opacity: 0.8;
-      transform: scale(0.85);
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    }
+/* Arrows */
+.arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--darkgreen);
+  color:var(--white);
+  border: none;
+  display: inline-flex;
+  /* Align icon center */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 20px;
+}
+/* Optional: Hover effect */
+.arrow:hover {
+  background-color: #15211d;
+}
 
-    .carousel-attractions-card > img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-    }
+.arrow.left {
+  left: 5px;
+}
 
-    .attractions-title {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      bottom: 0;
-      padding: 20px 0;
-      margin: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-      /* smooth gradient */
-      color: white;
-      font-family: var(--headfont);
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-      /* improves text visibility */
-      box-sizing: border-box;
-    }
-
-    /* Active spotlight card */
-    .carousel-attractions-card.active {
-      opacity: 1;
-      transform: scale(1.05);
-      z-index: 2;
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    }
-    /* restaurant cards */
-    .cardPlaces {
-      width: 250px;
-      margin-top: 1.5rem;
-      height: 350px;
-      border-radius: 10px;
-      padding: 0.5rem;
-      margin: 10px;
-      overflow: hidden;
-      scroll-snap-align: center;
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-      position: relative;
-    }
-
-    .cardImage {
-      height: 70%;
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      object-position: center center;
-      position: relative;
-
-    }
-
-    .cardPlaces:hover {
-      scale: 1.02;
-    }
-   .description{
-      margin-top: 0.5rem;
-    }
-
-    .TopPlaces {
-      position: relative;
-      margin: 2rem 0;
-      display: flex;
-      z-index: 1;
-    }
-
-    .scroll-snap {
-      position: relative;
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-    }
-
-    .scroll-snap::-webkit-scrollbar {
-      display: none;
-      /* Chrome, Safari */
-    }
-    .restaurant-details{
-      padding: 5px;
-    }
-     .cardPlaces .restaurant-details h3.placeTitle {
-      margin-top: 0.4rem;
-      font-size: 1.7rem;
-    }
-    .cardPlaces .restaurant-details p{
-      font-size: 12px;
-    }
-
-     .cardPlaces .rating {
-      position: absolute;
-      top: 21.7rem;
-      left: 1rem;
-      padding:4px 7px;
-      border-radius: 30px;   
-       background-color: var(--darkgreen);
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      font-size: 8px;
-    }
-
-
-    /* Arrows */
-    .arrow {
-      position: absolute;
-      width: 48px;
-      height: 48px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--darkgreen);
-      color: white;
-      border: none;
-      display: inline-flex;
-      /* Align icon center */
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-      border-radius: 50%;
-      font-size: 20px;
-    }
-    /* Optional: Hover effect */
-    .arrow:hover {
-      background-color:#15211d;
-      
-    }
-
-    .arrow.left {
-      left: 5px;
-    }
-
-    .arrow.right {
-      right: 5px;
-    }
-
-    /* .button {
-      background-color: #a7c295;
-      border: none;
-      border-radius: 6px;
-      padding: 0.4rem 1rem;
-      font-size: 1rem;
-    } */
-   
+.arrow.right {
+  right: 5px;
+}
 
 .save-button {
   border: none;
@@ -376,19 +372,19 @@ p.subtitle {
   cursor: pointer;
 }
 
-    .save-button.change {
-      color: rgb(83, 14, 14);
-      /* Red when toggled */
-    }
+.save-button.change {
+  color: rgb(83, 14, 14);
+  /* Red when toggled */
+}
 
-    /* footer */
-    footer{
-      height: 20vh;
-      position: relative;
-      bottom: 0;
-      left: 0;
-      background-color: var(--darkgreen);
-    }
+/* footer */
+footer {
+  height: 20vh;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: var(--darkgreen);
+}
 
 @media (max-width: 768px) {
   #nav-bar {
@@ -403,11 +399,11 @@ p.subtitle {
     justify-self: center;
     font-size: 1.2rem;
   }
-  .navigation{
+  .navigation {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: white;
+    background:var(--white);
     padding: 1rem 1.5rem;
     position: absolute;
     top: 50px; /* below navbar */
@@ -415,10 +411,10 @@ p.subtitle {
     width: 35%;
     min-width: 150px;
     height: 100vh;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    z-index: 1000 ;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
-  .navigation>*{
+  .navigation > * {
     padding: 1.5rem 1rem;
   }
   #searchbox {
@@ -434,7 +430,7 @@ p.subtitle {
     /* justify-self: center; */
     font-size: 14px;
   }
-  .button{
+  .button {
     font-size: 0.77rem;
   }
   #sidebar {
@@ -448,19 +444,19 @@ p.subtitle {
     justify-content: center;
     z-index: 1000;
   }
-  .container-fluid{
+  .container-fluid {
     margin-top: 1rem;
     position: relative;
     height: 35vh;
   }
-  .carousel-inner{
+  .carousel-inner {
     height: 35vh;
   }
-  .carousel-item img{
+  .carousel-item img {
     height: 40vh !important;
   }
   .carousel-attractions-card {
-    flex: 0 0 85%;
+    flex: 0 0 100%;
   }
 
   .attractions-title {
