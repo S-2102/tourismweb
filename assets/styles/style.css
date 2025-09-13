@@ -63,18 +63,20 @@ header{
 #searchbox {
   display: flex;
   position: relative;
+  font-size: 1.4rem;
 }
 #search-bar {
   width: 100%;
-  padding: 0.3rem 1.2rem;
-  background-color: var(white);
+  padding: 0.5rem;
+  background-color: var(--white);
   border: 2px solid var(--darkgreen);
   border-radius: 40px;
   outline: none;
 }
 #search-button {
   position: absolute;
-  top: 3px;
+  top: 50%;
+  transform: translate(-50%, -50%);
   right: 10px;
   border: none;
   background: none;
@@ -87,14 +89,14 @@ header{
   color: var(--darkgreen);
 }
 .button {
-  width: auto;
+  max-width: auto;
   margin: 0.5rem auto;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   border: 1px solid var(--gold);
   background-color: var(--white);
-  font-size: 1.2rem;
-  font-weight: 480;
+  font-size: 1.7rem;
+  font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
 }
 .button:hover {
@@ -390,6 +392,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header{
+    margin-bottom: 2rem;
+  }
   #nav-bar {
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-auto-rows: 100%;
@@ -420,11 +425,15 @@ footer {
   .navigation > * {
     padding: 1.5rem 1rem;
   }
+  #search-bar{
+    width: 100%;
+    padding: 0.8rem;
+  }
   #searchbox {
     grid-column: 1/4;
     grid-row: 2;
     width: 95%;
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
     justify-self: center;
   }
   #nav-action {
@@ -434,7 +443,7 @@ footer {
     font-size: 14px;
   }
   .button {
-    font-size: 0.77rem;
+    font-size: 1.1rem;
   }
   #sidebar {
     outline: none;
