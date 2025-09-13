@@ -1,11 +1,12 @@
 :root {
   --headfont: "Libertinus Serif", serif;
   --darkgreen: #1c352d;
+  --green: #2e7d32;
   --text-dark: #333;
   --text-light: #777;
 }
-.fill-red{
-  fill:red;
+.fill-red {
+  fill: red;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -14,29 +15,36 @@ body {
   color: var(--text-dark);
 }
 
-h1, h2 {
+.place-details h1,
+h2 {
   font-family: var(--headfont);
-  color: var(--darkgreen);
+  color: var(--green);
 }
+.place-details h1 {
+  font-size: 3.3em;
+}
+.place-details .description h2.place-details-title {
+  font-size: 2em;
+}
+
 .place-details {
   padding: 1.5rem;
   margin: auto;
-  
 }
-.title-icon{
+.title-icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
-.icon{
+.icon {
   display: flex;
   gap: 0.4rem;
 }
-.place-details-button{
-  width: 50px;
-  height: 50px;
+.place-details-button {
+  width: 35px;
+  height: 35px;
   border: 2px solid var(--darkgreen);
   border-radius: 50%;
   background-color: transparent;
@@ -44,17 +52,12 @@ h1, h2 {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-.place-details-button:hover{
-  background-color:var(--darkgreen);
-  color:#ddd;
+.place-details-button:hover {
+  background-color: var(--darkgreen);
+  color: #ddd;
 }
-.place-details-button .details-save-button{
-  color:#666;
-}
-
-.place-details h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+.place-details-button .details-save-button {
+  color: #666;
 }
 
 .place-description {
@@ -88,95 +91,150 @@ h1, h2 {
   height: 16px;
 }
 
-.images-grid {
-  display: grid;
-  grid-template-columns: minmax(150px, 1.5fr) minmax(100px, 1fr);
-  grid-template-rows: repeat(2,minmax(100px,250px));
-  gap: 0.2rem;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  box-sizing: border-box;
+.place-details {
+  max-width: 2000px;
+  padding: 20px;
 }
 
-
-.grid-img img {
+.place-images {
+  position: relative;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Slider Container */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 600px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* base positioning for 3 cells layout */
-.images-grid > .grid-img:nth-child(1) { grid-area: 1 / 1 / 3 / 2; } /* big left, spans both rows */
-.images-grid > .grid-img:nth-child(2) { grid-area: 1 / 2 / 2 / 3; } /* top-right */
-.images-grid > .grid-img:nth-child(3) { grid-area: 2 / 2 / 3 / 3; } /* bottom-right */
-
-/* places with only one image */
-.images-grid > .grid-img:only-child {
-  grid-column: 1 / -1;   /* span both columns */
-  grid-row: 1 / -1; 
-
-}
-  /* places with 2 images */
-.images-grid > .grid-img:nth-child(2):last-child {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;       /* spans both rows on the right */
-}
-.more-btn {
-  position: absolute;
-  bottom: 6px;
-  right: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 8px;
+  flex-shrink: 0;
   cursor: pointer;
 }
 
-.modal {
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--darkgreen);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.active-dot {
+  background-color: var(--green);
+}
+/* Fullscreen Modal Slider */
+ .place-modal {
   display: none;
   position: fixed;
-  inset: 0;
+  z-index: 2000;
   top: 0;
   left: 0;
-  width: 85%;
-  height: 85%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 3000;
-}
-
-.modal-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
   justify-content: center;
+  align-items: center;
 }
 
-.modal-content img {
-  max-width: 300px;
-  max-height: 200px;
-  object-fit: cover;
+ .place-modal .modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  overflow: hidden;
+  display: flex;
 }
 
-.close {
+ .place-modal .modal-slide {
+  display: none;
+  flex: 1;
+  text-align: center;
+}
+
+ .place-modal .modal-slide img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Close button */
+ .place-modal .modal-close {
   position: absolute;
-  bottom: 5px;
-  right: 20px;
-  font-size: 28px;
-  background: transparent;
-  border: none;
-  color: white;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
   cursor: pointer;
+  z-index: 3100;
 }
 
-/* Description area */
-.description h2.place-details-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+/* Navigation arrows */
+ .place-modal .modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--darkgreen);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 20px;
+  user-select: none;
+}
+
+.place-modal .modal-arrow.left {
+  left: 20px;
+}
+.place-modal .modal-arrow.right {
+  right: 20px;
 }
 
 .description p {
@@ -191,10 +249,14 @@ h1, h2 {
     flex-direction: column;
     align-items: flex-start;
   }
-  .images-grid{
-    grid-template-rows:repeat(2,minmax(100px,180px)) ;
+  .slider img {
+    height: 350px;
   }
-
+  .arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -214,10 +276,12 @@ h1, h2 {
     font-size: 0.95rem;
   }
 
-  .location, .rating {
+  .location,
+  .rating {
     font-size: 0.9rem;
   }
-  .images-grid{
-    grid-template-rows: 100px 100px ;
+
+  .slider img {
+    height: 200px;
   }
 }
