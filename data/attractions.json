@@ -40,11 +40,9 @@
      "images": [
       "/images/places/toytrain/train.webp",
       "/images/places/toytrain/toytrainView.jpg",
-      "/images/places/toytrain/toytrainView.jpg",
       "/images/places/toytrain/toy train image.jpg",
       "/images/places/toytrain/toytrain.jpg",
       "/images/places/toytrain/toytrain 2.jpg",
-      "/images/places/toytrain/toytrainView.jpg",
       "/images/Gallery/toy-train.jpg",
       "/images/Gallery/toytrain 1.jpg"
     ],
@@ -94,9 +92,7 @@
     "lat": 27.0287502,
     "lon": 88.2594609,
      "images": [
-      "/images/places/japanesetemple/japanese temple.jpg",
-      "/images/places/japanesetemple/japanese temple 2.jpg",
-      "/images/places/japanesetemple/supratik-deshmukh-57zZADm8pcY-unsplash.jpg"
+      "/images/places/japanesetemple/japanese temple.jpg"
     ],
     "description": "Japanese Buddhist stupa promoting peace, offering tranquil ambiance and panoramic views.",
     "hours": "4:30 AM - 7:00 PM",
@@ -111,7 +107,6 @@
     "lon": 88.2506,
      "images": [
       "/images/places/rockgarden/rockgarden 2.jpg",
-      "/images/places/rockgarden/rockgarden.jpg",
       "/images/places/rockgarden/rg.jpg"
     ],
     "description": "Terraced waterfall garden ideal for picnics and nature walks.",
@@ -126,9 +121,9 @@
     "lat": 27.0286,
     "lon": 88.2623,
      "images": [
+      "/images/places/ropeway/darjeeling-ropeway.webp",
       "/images/Gallery/Ropeway.jpg",
-      "/images/places/ropeway/Ropeway_Darjeeling_Photo.jpg.jpg",
-      "/images/places/ropeway/darjeeling-ropeway.jpg"
+      "/images/places/ropeway/Ropeway_Darjeeling_Photo.jpg"
     ],
     "description": "Cable car offering breathtaking aerial views of valleys, waterfalls, and tea estates.",
     "hours": "10:00 AM - 4:00 PM",

@@ -18,7 +18,7 @@
       "/images/restaurants/glenarys/the-restaurant-deck.jpg",
       "/images/restaurants/glenarys/the-restaurant.jpg",
       "/images/restaurants/glenarys/glenary-s food.jpg",
-      "/images/restaurants/glenarys/the-restaurent.jpg"
+      "/images/restaurants/glenarys/the-restaurant.jpg"
   ],
     "description": "A heritage café offering bakery items, continental dishes, and a rooftop view of the mountains.",
     "hours": "6:00 AM – 10:30 PM",
@@ -43,8 +43,8 @@
       "/images/restaurants/kunga/menuhightlights-glassNoodles.webp",
       "/images/restaurants/kunga/menuhightlights-tibetanTingMomo.webp",
       "/images/restaurants/kunga/momo.webp",
-      "/images/restaurants/kunga/thenthuk.webp",
-      "/images/restaurants/kunga/chicken-thhukpa.webp"
+      "/images/restaurants/kunga/thenthuk.jpg",
+      "/images/restaurants/kunga/chicken-thukpa.jpg"
     ],
     "description": "Cozy Tibetan eatery known for momos, thukpa, and authentic homemade dishes.",
     "hours": "10:00 AM – 6:00 PM",
@@ -84,19 +84,19 @@
     "lat": 27.0415,
     "lon": 88.2642,
     "images": [
-      "/images/restaurants/Keventer's/kev-location.jpg", 
-      "/images/restaurants/Keventer's/rooftop.webp",
-      "/images/restaurants/Keventer's/menuhighlights-HotChocolateCoffee.webp",
-      "/images/restaurants/Keventer's/menuhighlights-porkplatter-sausage-omelete.jpg",
-      "/images/restaurants/Keventer's/menuhighlights-porkplatter-withegg.jpg",
-      "/images/restaurants/Keventer's/menuhighlights-DarjeelingTea.webp",
-      "/images/restaurants/Keventer's/menuhighlights-ChickenSalamiSandwich.webp",
-      "/images/restaurants/Keventer's/menuhighlights-IceCream.webp",
-      "/images/restaurants/Keventer's/beverages-menu.png",
-      "/images/restaurants/Keventer's/breakfast-menu.png",
-      "/images/restaurants/Keventer's/non-veg-snacks-menu.png",
-      "/images/restaurants/Keventer's/veg-snacks-menu.png",
-      "/images/restaurants/Keventer's/Pork-Specialities-for-Breakfast&Snacks-menu.png"
+      "/images/restaurants/keventer's/kev-location.jpg", 
+      "/images/restaurants/keventer's/rooftop.webp",
+      "/images/restaurants/keventer's/menuhighlights-HotChocolateCoffee.webp",
+      "/images/restaurants/keventer's/menuhighlights-porkplatter-sausage-omelete.jpg",
+      "/images/restaurants/keventer's/menuhighlights-porkplatter-withegg.jpg",
+      "/images/restaurants/keventer's/menuhighlights-DarjeelingTea.webp",
+      "/images/restaurants/keventer's/menuhighlights-ChickenSalamiSandwich.webp",
+      "/images/restaurants/keventer's/menuhighlights-IceCream.webp",
+      "/images/restaurants/keventer's/beverages-menu.png",
+      "/images/restaurants/keventer's/breakfast-menu.png",
+      "/images/restaurants/keventer's/non-veg-snacks-menu.png",
+      "/images/restaurants/keventer's/veg-snacks-menu.png",
+      "/images/restaurants/keventer's/Pork-Specialities-for-Breakfast&Snacks-menu.png"
     ],
     "description": "Colonial-era café famous for breakfast platters, sausages, and rooftop tea.",
     "hours": "8:00 AM – 6:00 PM (Thursday - Closed)",
@@ -113,7 +113,7 @@
     "lon": 88.2639,
     "images": [
       "/images/restaurants/Tom&Jerry-Cafe/view.webp", 
-      "/images/restaurants/Tom&Jerry-Cafe/Cafe.webp", 
+      "/images/restaurants/Tom&Jerry-Cafe/Cafe.jpg", 
       "/images/restaurants/Tom&Jerry-Cafe/interior.webp", 
       "/images/restaurants/Tom&Jerry-Cafe/tom&jerryCafe.webp", 
       "/images/restaurants/Tom&Jerry-Cafe/Tom&Jerry.jpg", 
@@ -151,7 +151,10 @@
     "address": "Jawahar Road West, Near HMI, Darjeeling, West Bengal 734101",
     "lat": 27.0561,
     "lon": 88.2478,
-    "images": ["/images/restaurants/hotstimulating1.jpg", "/images/restaurants/hotstimulating2.jpg"],
+    "images": [
+    "/images/restaurants/Hot Stimulating Café/Hot_Stimulating_darjeeling.jpg", 
+    "/images/restaurants/Hot Stimulating Café/inside-hot-stimulating-cafe.jpg"
+  ],
     "description": "Famous roadside café serving momos, wai-wai, and special ginger tea.",
     "hours": "10:00 AM – 7:00 PM",
     "contact": "099322 60769",
@@ -166,8 +169,16 @@
     "lat": 27.0416,
     "lon": 88.2638,
     "images": [
-      "/images/restaurants/frankross1.jpg", 
-      "/images/restaurants/frankross2.jpg"
+      "/images/restaurants/Frank-Ross-Café/Frank Ross Café.jpg", 
+      "/images/restaurants/Frank-Ross-Café/frank-ross-cafe.jpg",
+      "/images/restaurants/Frank-Ross-Café/dining.webp",
+      "/images/restaurants/Frank-Ross-Café/counter.jpg",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-alu-paratha-curd.webp",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-masala-dosa.webp",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-mumbai-special-sandwich.webp",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-pancakes.webp",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-pasata-in-white-sauce.webp",
+      "/images/restaurants/Frank-Ross-Café/menuhighlights-veg-momo.webp"
     ],
     "description": "Vegetarian café famous for pastries, sandwiches, and light meals.",
     "hours": "8:30 AM – 8:00 PM",
@@ -182,7 +193,17 @@
     "address": "11 Ladenla Road Opposite To Inox Opposite to Inox, Darjeeling 734101 India",
     "lat": 27.0421,
     "lon": 88.2643,
-    "images": ["/images/restaurants/penang1.jpg", "/images/restaurants/penang2.jpg"],
+    "images": [
+    "/images/restaurants/penang-Restaurant/penang.jpg", 
+    "/images/restaurants/penang-Restaurant/menuhighlights-nepali-thali.webp",
+    "/images/restaurants/penang-Restaurant/menuhighlights-Cantonese-Chicken-rice-noodle.jpg",
+    "/images/restaurants/penang-Restaurant/menuhighlights-pork-thukpa&chilli-pork.webp",
+    "/images/restaurants/penang-Restaurant/menuhighlights-pork-momo.webp",
+    "/images/restaurants/penang-Restaurant/menuhighlights-special-pork-thukpa.webp",
+    "/images/restaurants/penang-Restaurant/menuhighlights-Pork-thali.webp",
+    "/images/restaurants/penang-Restaurant/food.jpg",
+    "/images/restaurants/penang-Restaurant/food2.jpg"
+  ],
     "description": "Known for its authentic Nepali and Bhutanese cuisine.",
     "hours": "11:00 AM – 9:00 PM",
     "contact": "+91 354 225 3044",
@@ -210,7 +231,22 @@
     "address": "27R8+773, Laden la Rd, opp. state bank of india, Chauk Bazaar, Darjeeling, West Bengal 734101",
     "lat": 27.0417,
     "lon": 88.2637,
-    "images": ["/images/restaurants/park1.jpg", "/images/restaurants/park2.jpg"],
+    "images": [
+    "/images/restaurants/TheParkRestaurant/park-restaurant.webp", 
+    "/images/restaurants/TheParkRestaurant/park-restaurant.jpg",
+    "/images/restaurants/TheParkRestaurant/park-entry.webp",
+    "/images/restaurants/TheParkRestaurant/dinings.jpg",
+    "/images/restaurants/TheParkRestaurant/dining.jpg",
+    "/images/restaurants/TheParkRestaurant/food.jpg",
+    "/images/restaurants/TheParkRestaurant/inside-of-park-res.jpg",
+    "/images/restaurants/TheParkRestaurant/pad-thai-or-rice-noodles.jpg",
+    "/images/restaurants/TheParkRestaurant/tomyom-soup.jpg",
+    "/images/restaurants/TheParkRestaurant/thai-combo.jpg",
+    "/images/restaurants/TheParkRestaurant/pork-ribs.jpg",
+    "/images/restaurants/TheParkRestaurant/noodles.webp",
+    "/images/restaurants/TheParkRestaurant/cashewnut-chicken.jpg",
+    "/images/restaurants/TheParkRestaurant/bon-veg-stir-fried-vegetable.jpg"
+  ],
     "description": "Casual family restaurant serving Indian and Chinese meals.",
     "hours": "11:00 AM – 9:30 PM",
     "contact": "+91 354 225 5270",
@@ -218,18 +254,29 @@
   },
   {
     "id": "res12",
-    "name": "Magnolia Restaurant",
-    "title": "Fine Dining with Himalayan Views",
-    "rating": 4.1,
-    "address": "Hotel Magnolia, Gandhi Road, Darjeeling, West Bengal 734101",
-    "lat": 27.0437,
-    "lon": 88.2633,
-    "images": ["/images/restaurants/magnolia1.jpg", "/images/restaurants/magnolia2.jpg"],
-    "description": "Upscale restaurant offering multi-cuisine dining with mountain views.",
-    "hours": "11:00 AM – 10:30 PM",
-    "contact": "+91 354 225 3152",
-    "priceRange": "₹500 – ₹1000 per person"
+    "name": "SuzAm's Cafe n Kitchen",
+    "title": "Cafe",
+    "rating": 4.8,
+    "address": "Rope Way, Darjeeling 734104 India",
+    "lat": 27.0428,
+    "lon": 88.2636,
+    "images": [
+      "/images/restaurants/Suzam's/view-from-rooftop.jpg", 
+      "/images/restaurants/Suzam's/main-cozy-room.jpg", 
+      "/images/restaurants/Suzam's/rooftop-night.jpg", 
+      "/images/restaurants/Suzam's/inside-suzam's.jpg", 
+      "/images/restaurants/Suzam's/rooftop.webp", 
+      "/images/restaurants/Suzam's/suzam-s-cafe-n-kitchen-coffee.jpg", 
+      "/images/restaurants/Suzam's/egg-friedrice.jpg", 
+      "/images/restaurants/Suzam's/chowmein.jpg", 
+      "/images/restaurants/Suzam's/french-fries.jpg"
+  ],
+    "description": "Serving Mughlai, kebabs, and tandoori dishes in a modern setting.",
+    "hours": "9:00 AM – 7:30 PM",
+    "contact": "+91 86187 13750",
+    "priceRange": "₹200 – ₹400 per person"
   },
+
   {
     "id": "res13",
     "name": "Fiesta Restaurant",
@@ -273,27 +320,18 @@
     "priceRange": "₹150 – ₹400 per person"
   },
   {
-    "id": "res14",
-    "name": "SuzAm's Cafe n Kitchen",
-    "title": "Cafe",
-    "rating": 4.8,
-    "address": "Rope Way, Darjeeling 734104 India",
-    "lat": 27.0428,
-    "lon": 88.2636,
-    "images": [
-      "/images/restaurants/Suzam's/view-from-rooftop.jpg", 
-      "/images/restaurants/Suzam's/main-cozy-room.jpg", 
-      "/images/restaurants/Suzam's/rooftop-night.jpg", 
-      "/images/restaurants/Suzam's/inside-suzam's.jpg", 
-      "/images/restaurants/Suzam's/rooftop.jpg", 
-      "/images/restaurants/Suzam's/suzam-s-cafe-n-kitchen-coffee.jpg", 
-      "/images/restaurants/Suzam's/egg-friedrice.jpg", 
-      "/images/restaurants/Suzam's/chowmein.jpg", 
-      "/images/restaurants/Suzam's/frenchfries.jpg"
-  ],
-    "description": "Serving Mughlai, kebabs, and tandoori dishes in a modern setting.",
-    "hours": "9:00 AM – 7:30 PM",
-    "contact": "+91 86187 13750",
-    "priceRange": "₹200 – ₹400 per person"
+    "id": "res16",
+        "name": "Magnolia Restaurant",
+    "title": "Fine Dining with Himalayan Views",
+    "rating": 4.1,
+    "address": "Hotel Magnolia, Gandhi Road, Darjeeling, West Bengal 734101",
+    "lat": 27.0437,
+    "lon": 88.2633,
+    "images": ["/images/restaurants/magnolia1.jpg", "/images/restaurants/magnolia2.jpg"],
+    "description": "Upscale restaurant offering multi-cuisine dining with mountain views.",
+    "hours": "11:00 AM – 10:30 PM",
+    "contact": "+91 354 225 3152",
+    "priceRange": "₹500 – ₹1000 per person"
+
   }
 ]
