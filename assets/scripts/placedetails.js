@@ -102,41 +102,41 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
     }
     });
-});
+
 // map
-function getDirections(lat, lon, placeId) {
+    // ---- Directions Button Logic ----
+  const directionButtons = document.querySelectorAll(".place-details-button.direction");
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      function (position) {
-        // ✅ User allowed location
-        let userLat = position.coords.latitude;
-        let userLon = position.coords.longitude;
+  directionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const lat = button.dataset.lat;
+      const lon = button.dataset.lon;
 
-        let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLon}&destination=${lat},${lon}`;
-        window.open(mapsUrl, "_blank");
-      },
-      function () {
-        // ❌ Access denied → fallback to place details
-        window.location.href = `/placedetails/${placeId}`;
+      if (!lat || !lon) {
+        alert("Coordinates not available for this place.");
+        return;
       }
-    );
-  } else {
-    alert("Geolocation not supported.");
-    window.location.href = `/placedetails/${placeId}`;
-  }
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".place-details-button.direction");
-  if (btn) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
 
-    btn.addEventListener("click", () => {
-      console.log("clicked")
-      const lat = btn.dataset.lat;
-      const lon = btn.dataset.lon;
-      const placeId = btn.dataset.id;
-      getDirections(lat, lon, placeId);
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLon}&destination=${lat},${lon}`;
+            window.open(mapsUrl, "_blank");
+          },
+          (error) => {
+            alert("Unable to access your location. Opening destination only.");
+            const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+            window.open(mapsUrl, "_blank");
+          }
+        );
+      } else {
+        alert("Geolocation not supported. Opening destination only.");
+        const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+        window.open(mapsUrl, "_blank");
+      }
     });
-  }
+  });
 });
