@@ -135,7 +135,7 @@ app.get("/search", (req, res) => {
   // let fuzzyResults = fuse.search(query).map(r => r.item);
   // results = [...results, ...fuzzyResults.filter(r => !results.includes(r))];
 
-  res.render("searchResults.ejs", { query, results });
+  res.render("searchresults.ejs", { query, results });
 });
 
 
