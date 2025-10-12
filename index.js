@@ -161,7 +161,7 @@ app.get("/search", (req, res) => {
   const query = (req.query.q || "").trim().toLowerCase();
   let results = allPlaces.filter(p => p.name.toLowerCase().startsWith(query));
   if (results.length === 0 && query) results = fuse.search(query).map(r => r.item);
-  res.render("searchResults.ejs", { query, results });
+  res.render("searchresults.ejs", { query, results });
 });
 
 // ---------------------- Reviews ----------------------
