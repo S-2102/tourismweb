@@ -1,0 +1,16 @@
+[
+  {
+    "email": "saineka@example.com",
+    "password": "admin123",
+    "role": "admin",
+    "favorites": [],
+    "reviews": []
+  },
+  {
+    "email": "alice@gmail.com",
+    "password": "alice",
+    "role": "user",
+    "favorites": [],
+    "reviews": []
+  }
+]

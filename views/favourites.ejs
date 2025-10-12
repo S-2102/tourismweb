@@ -1,3 +1,28 @@
 <%- include("static/header.ejs") %>
-<h1>Favourites</h1>
+<script>
+  window.isLoggedIn = <%- JSON.stringify(!!user) %>;
+  window.userFavorites = <%- JSON.stringify(favorites) %>;
+</script>
+
+<% if (message) { %>
+  <p><%= message %></p>
+<% } else if (!favPlaces || favPlaces.length === 0) { %>
+  <p>You have no saved places.</p>
+<% } else { %>
+  <div class="fav-container">
+  <% favPlaces.forEach(place => { %>
+    <div class="place-card" id="fav-<%= place.id %>">
+      <img src="<%= place.image %>" alt="<%= place.name %>">
+      <h3><%= place.name %></h3>
+      <p><%= place.location %></p>
+      <button type="button" class="save-button" data-id="<%= place.id %>">
+        <svg ...></svg>
+      </button>
+    </div>
+  <% }) %>
+</div>
+
+<% } %>
+
+
 <%- include("static/footer.ejs") %>

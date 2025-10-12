@@ -9,13 +9,13 @@ sidebarbutton.setAttribute("aria-expanded",!expanded);
 
 });
 // savebutton
-  const save=document.querySelectorAll(".save-button svg");
-       save.forEach((save)=>{
-         save.addEventListener("click",function(e){
-           e.preventDefault(); 
-        save.classList.toggle("fill-red");
-       })
-       });
+  // const save=document.querySelectorAll(".save-button svg");
+  //      save.forEach((save)=>{
+  //        save.addEventListener("click",function(e){
+  //          e.preventDefault(); 
+  //       save.classList.toggle("fill-red");
+  //      })
+  //      });
 
 // attractions carousel
 // Select the carousel track (the long row of cards)

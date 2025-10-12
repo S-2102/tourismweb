@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard | Local Tourism Guide</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+  body { background-color: #f8f9fa; }
+  .sidebar { background: #212529; color: white; min-height: 100vh; padding: 1rem; position: fixed; width: 240px; }
+  .sidebar h3 { font-weight: bold; color: #ffc107; }
+  .sidebar a { color: #adb5bd; text-decoration: none; display: block; padding: 10px 0; cursor: pointer; }
+  .sidebar a.active, .sidebar a:hover { color: #fff; }
+  .main-content { margin-left: 260px; padding: 2rem; }
+  .table thead { background: #343a40; color: white; }
+  .card { border-radius: 15px; }
+  td img { width: 50px; height: 50px; object-fit: cover; border-radius: 5px; }
+  @media(max-width:768px){
+    .main-content { margin-left: 0; padding: 1rem; }
+    .sidebar { position: relative; width: 100%; min-height: auto; display: flex; flex-direction: row; overflow-x: auto; }
+    .sidebar a { padding: 0.5rem 1rem; flex-shrink:0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h3><i class="bi bi-geo-alt-fill"></i> Admin Panel</h3>
+  <hr class="text-light">
+  <a class="active" data-tab="users">Users</a>
+  <a data-tab="reviews">Reviews</a>
+  <a data-tab="attractions">Attractions</a>
+  <a data-tab="restaurants">Restaurants</a>
+  <hr class="text-light">
+  <a href="/" class="btn btn-warning btn-sm w-100"><i class="bi bi-house"></i> Back to Site</a>
+</div>
+
+<div class="main-content">
+  <h1 class="mb-4"><i class="bi bi-speedometer"></i> Dashboard Overview</h1>
+
+  <!-- Users -->
+  <div id="tabUsers" class="tab-content">
+    <div class="card p-4 shadow-sm mb-3">
+      <h3>Users</h3>
+      <table class="table table-hover mt-3">
+        <thead>
+          <tr><th>Email</th><th>Role</th><th>Favorites</th><th>Reviews</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <% users.forEach(u => { %>
+          <tr>
+            <td><%= u.email %></td>
+            <td><%= u.role || 'user' %></td>
+            <td><%= u.favorites?.length || 0 %></td>
+            <td><%= u.reviews?.length || 0 %></td>
+            <td>
+              <% if(u.role!=='admin'){ %>
+              <form action="/admin/delete-user" method="post" class="d-inline">
+                <input type="hidden" name="email" value="<%= u.email %>">
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete</button>
+              </form>
+              <% } %>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Reviews -->
+  <div id="tabReviews" class="tab-content d-none">
+    <div class="card p-4 shadow-sm mb-3">
+      <h3>All Reviews</h3>
+      <% Object.keys(reviews || {}).forEach(pid => { %>
+      <div class="card mb-3 border-info p-3">
+        <h5>
+          <%= attractions.find(a => a.id==pid)?.name || restaurants.find(r => r.id==pid)?.name || 'Unknown Place' %>
+        </h5>
+        <ul class="list-group list-group-flush">
+          <% (reviews[pid]||[]).forEach((r, idx)=>{ %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><strong><%= r.user %>:</strong> <%= r.reviewText %></span>
+            <form action="/admin/delete-review" method="post">
+              <input type="hidden" name="placeId" value="<%= pid %>">
+              <input type="hidden" name="index" value="<%= idx %>">
+              <button class="btn btn-sm btn-danger"><i class="bi bi-x-circle"></i> Remove</button>
+            </form>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <!-- Attractions -->
+  <div id="tabAttractions" class="tab-content d-none">
+    <div class="card p-4 shadow-sm mb-3">
+      <h3>Manage Attractions</h3>
+      <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addAttractionModal">
+        <i class="bi bi-plus-circle"></i> Add Attraction
+      </button>
+      <table class="table table-striped">
+        <thead>
+          <tr><th>Image</th><th>Name</th><th>Location</th><th>Lat</th><th>Lon</th><th>Rating</th><th>Reviews</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <% attractions.forEach(a=>{ %>
+          <tr>
+            <td><% if(a.image){ %><img src="<%= a.image %>" alt="<%= a.name %>"><% } %></td>
+            <td><%= a.name %></td>
+            <td><%= a.location %></td>
+            <td><%= a.latitude || 'N/A' %></td>
+            <td><%= a.longitude || 'N/A' %></td>
+            <td><%= a.rating %></td>
+            <td>
+              <button type="button" class="btn btn-sm btn-info view-reviews" data-id="<%= a.id %>">
+                <i class="bi bi-chat-left-text"></i> View
+              </button>
+            </td>
+            <td>
+              <form action="/admin/delete-attraction" method="post">
+                <input type="hidden" name="id" value="<%= a.id %>">
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Restaurants -->
+  <div id="tabRestaurants" class="tab-content d-none">
+    <div class="card p-4 shadow-sm mb-3">
+      <h3>Manage Restaurants</h3>
+      <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addRestaurantModal">
+        <i class="bi bi-plus-circle"></i> Add Restaurant
+      </button>
+      <table class="table table-striped">
+        <thead>
+          <tr><th>Image</th><th>Name</th><th>Location</th><th>Lat</th><th>Lon</th><th>Rating</th><th>Price</th><th>Reviews</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <% restaurants.forEach(r=>{ %>
+          <tr>
+            <td><% if(r.image){ %><img src="<%= r.image %>" alt="<%= r.name %>"><% } %></td>
+            <td><%= r.name %></td>
+            <td><%= r.location %></td>
+            <td><%= r.latitude || 'N/A' %></td>
+            <td><%= r.longitude || 'N/A' %></td>
+            <td><%= r.rating %></td>
+            <td><%= r.price_range || "N/A" %></td>
+            <td>
+              <button type="button" class="btn btn-sm btn-info view-reviews" data-id="<%= r.id %>">
+                <i class="bi bi-chat-left-text"></i> View
+              </button>
+            </td>
+            <td>
+              <form action="/admin/delete-restaurant" method="post">
+                <input type="hidden" name="id" value="<%= r.id %>">
+                <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<!-- Add Attraction -->
+<div class="modal fade" id="addAttractionModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="/admin/add-attraction" method="post" enctype="multipart/form-data">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Add New Attraction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
+          <input type="text" name="location" class="form-control mb-2" placeholder="Location" required>
+          <input type="text" name="latitude" class="form-control mb-2" placeholder="Latitude">
+          <input type="text" name="longitude" class="form-control mb-2" placeholder="Longitude">
+          <input type="file" name="image" class="form-control mb-2" accept="image/*">
+          <input type="text" name="rating" class="form-control mb-2" placeholder="Rating (1-5)">
+          <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Add Restaurant -->
+<div class="modal fade" id="addRestaurantModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="/admin/add-restaurant" method="post" enctype="multipart/form-data">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Add New Restaurant</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
+          <input type="text" name="location" class="form-control mb-2" placeholder="Location" required>
+          <input type="text" name="latitude" class="form-control mb-2" placeholder="Latitude">
+          <input type="text" name="longitude" class="form-control mb-2" placeholder="Longitude">
+          <input type="file" name="image" class="form-control mb-2" accept="image/*">
+          <input type="text" name="rating" class="form-control mb-2" placeholder="Rating (1-5)">
+          <input type="text" name="price_range" class="form-control mb-2" placeholder="Price Range">
+          <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Reviews Modal -->
+<div class="modal fade" id="reviewsModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reviews</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="reviewsModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const reviewsData = <%- JSON.stringify(reviews || {}) %>;
+const attractionsData = <%- JSON.stringify(attractions || []) %>;
+const restaurantsData = <%- JSON.stringify(restaurants || []) %>;
+
+// Sidebar tab switching
+document.querySelectorAll('.sidebar a[data-tab]').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('.sidebar a[data-tab]').forEach(l=>l.classList.remove('active'));
+    link.classList.add('active');
+    const tab = link.getAttribute('data-tab');
+    document.querySelectorAll('.tab-content').forEach(c=>{
+      c.id === 'tab'+tab.charAt(0).toUpperCase()+tab.slice(1) ? c.classList.remove('d-none') : c.classList.add('d-none');
+    });
+  });
+});
+
+// View reviews modal
+document.querySelectorAll('.view-reviews').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const placeId = btn.dataset.id;
+    const placeName = (attractionsData.find(a=>a.id==placeId)?.name || restaurantsData.find(r=>r.id==placeId)?.name || 'Unknown Place');
+    const placeReviews = reviewsData[placeId] || [];
+    const modalBody = document.getElementById('reviewsModalBody');
+    modalBody.innerHTML = `<h6>${placeName}</h6>` + placeReviews.map(r=>`<p><strong>${r.user}:</strong> ${r.reviewText}</p>`).join('');
+    new bootstrap.Modal(document.getElementById('reviewsModal')).show();
+  });
+});
+</script>
+</body>
+</html>

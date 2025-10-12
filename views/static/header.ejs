@@ -34,7 +34,6 @@
       <ul class="navigation">
         <li class="menu-item"><a href="/">Home</a></li>
         <li class="menu-item"><a href="#about-us">About</a></li>
-        <li class="menu-item"><a href="/navigation">Navigate</a></li>
         <li class="menu-item"><a href="/favourites">Favourites</a></li>
       </ul>
       <form action="/search" method="get" class="d-flex" id="searchbox">
@@ -46,8 +45,18 @@
           </svg>
         </button>
       </form>
-      <button type="button" class="button" id="nav-action" data-bs-toggle="modal" data-bs-target="#authModal"
-        data-bs-backdrop="static">Login</button>
+      <% if (user) { %>
+  <!-- User is logged in -->
+<div class="user-info">
+  <span>Welcome, <%= user.email %>!</span>
+  <form action="/logout" method="post" style="display:inline;">
+    <button type="submit" class="button">Logout</button>
+  </form>
+</div>
+<% } else { %>
+<button type="button" class="button" id="nav-action" data-bs-toggle="modal" data-bs-target="#authModal"
+  data-bs-backdrop="static">Login</button>
+<% } %>
     </nav>
   </header>
   <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
