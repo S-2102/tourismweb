@@ -32,6 +32,8 @@ const galleryPath = path.join(__dirname, "data", "gallery.json");
 const attractionsPath = path.join(__dirname, "data", "attractions.json");
 const restaurantsPath = path.join(__dirname, "data", "restaurants.json");
 const usersPath = path.join(__dirname, "data", "users.json");
+const reviewsPath = path.join(__dirname, "data", "reviews.json");
+
 
 // ---------------------- Load JSON ----------------------
 const gallery = readJSON(galleryPath, []);
@@ -52,7 +54,8 @@ if (!users.find(u => u.role === "admin")) {
 }
 
 // Reviews storage
-let reviews = {};
+let reviews = readJSON(reviewsPath, {});
+
 
 // ---------------------- Multer for uploads ----------------------
 const storage = multer.diskStorage({
@@ -164,13 +167,30 @@ app.get("/search", (req, res) => {
 // ---------------------- Reviews ----------------------
 app.post("/submit-review", (req, res) => {
   if (!req.session.user) return res.send("Login required");
-  const { placeId, reviewText } = req.body;
+
+  const { placeId, reviewText, rating } = req.body;
   const email = req.session.user.email;
+
   if (!reviews[placeId]) reviews[placeId] = [];
-  reviews[placeId].push({ user: email, reviewText });
+
+  const review = {
+    user: email,
+    reviewText,
+    rating: parseInt(rating),
+    date: new Date().toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" }),
+  };
+
+  reviews[placeId].push(review);
+
+  // Save to user's personal reviews too
   const user = users.find(u => u.email === email);
-  user.reviews.push({ placeId, reviewText });
-  saveJSON(usersPath, users);
+  if (user) {
+    if (!user.reviews) user.reviews = [];
+    user.reviews.push({ placeId, ...review });
+    saveJSON(usersPath, users);
+  }
+
+  saveJSON(reviewsPath, reviews);
   res.redirect(`/placedetails/${placeId}`);
 });
 
@@ -230,6 +250,14 @@ function ensureAdmin(req, res, next) {
 
 app.get("/admin", ensureAdmin, (req, res) => {
   res.render("admin.ejs", { users, reviews, attractions, restaurants });
+});
+app.post("/admin/delete-review", ensureAdmin, (req, res) => {
+  const { placeId, index } = req.body;
+  if (reviews[placeId]) {
+    reviews[placeId].splice(index, 1);
+    saveJSON(reviewsPath, reviews);
+  }
+  res.redirect("/admin");
 });
 
 // Admin delete/add routes

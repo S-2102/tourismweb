@@ -22,7 +22,7 @@
           </svg>
         </button>
 
-      <button class="place-details-button review">
+      <button class="place-details-button review" id="openReviewButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="20px"
@@ -119,5 +119,69 @@
   <span class="modal-arrow right" id="modalNext">&#8594;</span>
   <div class="modal-dots" id="modalDots"></div>
 </div>
+
+<div class="review-overlay" id="reviewOverlay">
+  <div class="review-page">
+    <span class="close-review" id="closeReview">&times;</span>
+
+    <h2>Write a Review for <%= place.name %></h2>
+    <form id="reviewForm" action="/submit-review" method="POST">
+      <input type="hidden" name="placeId" value="<%= place.id %>">
+      <input type="hidden" name="userId" value="<%= user ? user.id : '' %>">
+
+      <div class="mb-3">
+        <label class="form-label">Your Rating</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="reviewText" class="form-label">Your Review</label>
+        <textarea id="reviewText" name="reviewText" class="form-control" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">Submit Review</button>
+    </form>
+  </div>
+</div>
+
+<section class="pd-reviews my-5">
+  <h3 class="pd-reviews-title mb-4">User Reviews</h3>
+
+  <% if (reviews && reviews.length > 0) { %>
+    <div class="pd-reviews-container scrollable">
+      <% reviews.forEach(r => { %>
+        <div class="pd-review-card">
+          <div class="pd-review-header">
+            <strong><%= r.user %></strong>
+            <% if (r.email) { %>
+              <span class="pd-email">&lt;<%= r.email %>&gt;</span>
+            <% } %>
+            <% if (r.rating) { %>
+              <span class="pd-rating">Rating: <%= r.rating %>/5</span>
+            <% } %>
+          </div>
+          <div class="pd-review-body">
+            <p><%= r.reviewText %></p>
+          </div>
+          <% if (r.date) { %>
+            <div class="pd-review-footer">
+              <small>Reviewed on: <%= new Date(r.date).toLocaleDateString() %></small>
+            </div>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="pd-no-reviews">
+      <p>No reviews yet. Be the first to share your experience!</p>
+    </div>
+  <% } %>
+</section>
 
 <%- include("static/footer.ejs") %>

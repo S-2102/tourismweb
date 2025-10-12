@@ -81,7 +81,13 @@
         <ul class="list-group list-group-flush">
           <% (reviews[pid]||[]).forEach((r, idx)=>{ %>
           <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span><strong><%= r.user %>:</strong> <%= r.reviewText %></span>
+            <span>
+              <strong><%= r.user %></strong> (<%= r.email %>)<br>
+              ⭐ <%= r.rating || 'N/A' %><br>
+              <%= r.reviewText %><br>
+              <small class="text-muted"><%= r.date %></small>
+            </span>
+
             <form action="/admin/delete-review" method="post">
               <input type="hidden" name="placeId" value="<%= pid %>">
               <input type="hidden" name="index" value="<%= idx %>">

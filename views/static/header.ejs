@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/styles/viewGallery.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
   <link rel="stylesheet" href="/styles/about.css" />
+  <link rel="stylesheet" href="/styles/review.css" />
 </head>
 
 <body>
@@ -134,5 +135,8 @@
       </div>
     </div>
   </div>
-
+<script>
+  window.isLoggedIn = <%- JSON.stringify(!!user) %>;
+  window.userFavorites = <%- JSON.stringify(user ? user.favorites : []) %>;
+</script>
   <main class="main">

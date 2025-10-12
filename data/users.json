@@ -11,6 +11,22 @@
     "password": "alice",
     "role": "user",
     "favorites": [],
-    "reviews": []
+    "reviews": [
+      {
+        "placeId": "at2"
+      },
+      {
+        "placeId": "at2",
+        "user": "alice@gmail.com",
+        "rating": 5,
+        "date": "13 Oct 2025, 1:25 am"
+      },
+      {
+        "placeId": "at2",
+        "user": "alice@gmail.com",
+        "rating": 5,
+        "date": "13 Oct 2025, 1:27 am"
+      }
+    ]
   }
 ]
