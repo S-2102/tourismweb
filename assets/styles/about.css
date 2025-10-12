@@ -1,0 +1,99 @@
+.about-us-section {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 100%); /* dark tourism green */
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.about-us-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.about-us-heading::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #10b981; /* bright accent green */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.flex-sections {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Individual section box with lighter background */
+.section-box {
+    background: #f0fdf4; /* light green / white contrast */
+    padding: 30px 20px;
+    border-radius: 12px;
+    flex: 1 1 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #064e3b; /* dark green text */
+}
+
+.section-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.section-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #047857; /* medium green for headings */
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #064e3b;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.feature-check {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .flex-sections {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section-box {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .feature {
+        justify-content: center;
+    }
+}
